@@ -1,0 +1,1 @@
+<img class="img-fluid" src="/local/templates/main/assets/images/logo/03_logo.png" alt="Footer Logo">

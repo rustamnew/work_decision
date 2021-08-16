@@ -56,12 +56,15 @@
 */
 
 /* :: All Transition */
+
+/*
 * {
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     outline: none;
 }
+*/
 
 /* :: Body */
 body {
@@ -3463,4 +3466,14 @@ body.active-dark-mode-decision,
 .active-dark-mode-decision .single-practice-areas-box h4,
 .active-dark-mode-decision .page-404-area h2{
     color: #FFF;
+}
+
+
+
+
+.page-wrapper {
+    position: relative;
+}
+header.navs {
+    position: absolute;
 }

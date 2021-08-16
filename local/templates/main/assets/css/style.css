@@ -1121,12 +1121,14 @@ header.navs.active{
     margin: 15px 0 0 0;
     color: #FFF;
 }
+/*
 .features .features-box .features-item:nth-of-type(2){
     background-color: #C89D66;
 }
 .features .features-box .features-item:nth-of-type(2) i{
     color: #F1F1F1;
 }
+*/
 
 /* :: Features 2 */
 .features-2 .features-box{
@@ -3476,4 +3478,11 @@ body.active-dark-mode-decision,
 }
 header.navs {
     position: absolute;
+}
+.features-image {
+    float: left;
+
+}
+.features-image img {
+    height: 40px;
 }

@@ -31,26 +31,29 @@ $this->setFrameMode(true);
 									<a class="btn-1 btn-2 move-section" href="<?=$arItem["PROPERTIES"]["url"]["VALUE"];?>"><?=$arItem["PROPERTIES"]["text"]["VALUE"];?></a>
                                 </div>
                                 <?if($arItem["PROPERTIES"]["teasers_show"]["VALUE"]):?>
-									
-
-
-
 									<div class="services-header text-right">
 										<div class="line">
 											<?if($arItem["PROPERTIES"]["teaser1_show"]["VALUE"]):?>
 												<div class="services-item">
 													<?if($arItem["PROPERTIES"]["teaser1_icon"]["VALUE"]):?>
-														<div class="services-item-icon">
-															<?
-															$img_file = CFile::GetPath($arItem['PROPERTIES']['teaser1_icon']['VALUE']);
-															$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
-															if($svg['id']){
-																$img_grup = $img_file.'#'.$svg['id'];
-															}
-															$svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
-															print_r($svg_file);
-															?>
-														</div>
+														<?$path = CFile::GetPath($arItem['PROPERTIES']['teaser1_icon']['VALUE']);?>
+														<?if (stristr($path, '.svg')):?>
+															<div class="services-item-icon">
+																<?
+																$img_file = CFile::GetPath($arItem['PROPERTIES']['teaser1_icon']['VALUE']);
+																$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
+																if($svg['id']){
+																	$img_grup = $img_file.'#'.$svg['id'];
+																}
+																$svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
+																print_r($svg_file);
+																?>
+															</div>
+														<?else:?>
+															<div class="services-item-icon">
+																<img src=<?echo CFile::GetPath($arItem["PROPERTIES"]["teaser1_icon"]["VALUE"]);?> style="width: unset;">
+															</div>
+														<?endif;?>
 													<?endif;?>
 													<span><?=$arItem["PROPERTIES"]["teaser1_title"]["VALUE"];?></span>
 												</div>
@@ -59,17 +62,24 @@ $this->setFrameMode(true);
 											<?if($arItem["PROPERTIES"]["teaser2_show"]["VALUE"]):?>
 												<div class="services-item">
 													<?if($arItem["PROPERTIES"]["teaser2_icon"]["VALUE"]):?>
-														<div class="services-item-icon">
-															<?
-															$img_file = CFile::GetPath($arItem['PROPERTIES']['teaser2_icon']['VALUE']);
-															$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
-															if($svg['id']){
-																$img_grup = $img_file.'#'.$svg['id'];
-															}
-															$svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
-															print_r($svg_file);
-															?>
-														</div>
+														<?$path = CFile::GetPath($arItem['PROPERTIES']['teaser2_icon']['VALUE']);?>
+														<?if (stristr($path, '.svg')):?>
+															<div class="services-item-icon">
+																<?
+																$img_file = CFile::GetPath($arItem['PROPERTIES']['teaser2_icon']['VALUE']);
+																$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
+																if($svg['id']){
+																	$img_grup = $img_file.'#'.$svg['id'];
+																}
+																$svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
+																print_r($svg_file);
+																?>
+															</div>
+														<?else:?>
+															<div class="services-item-icon">
+																<img src=<?echo CFile::GetPath($arItem["PROPERTIES"]["teaser2_icon"]["VALUE"]);?> style="width: unset;">
+															</div>
+														<?endif;?>
 													<?endif;?>
 													<span><?=$arItem["PROPERTIES"]["teaser2_title"]["VALUE"];?></span>
 												</div>
@@ -79,17 +89,24 @@ $this->setFrameMode(true);
 											<?if($arItem["PROPERTIES"]["teaser3_show"]["VALUE"]):?>
 												<div class="services-item">
 													<?if($arItem["PROPERTIES"]["teaser3_icon"]["VALUE"]):?>
-														<div class="services-item-icon">
-															<?
-															$img_file = CFile::GetPath($arItem['PROPERTIES']['teaser3_icon']['VALUE']);
-															$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
-															if($svg['id']){
-																$img_grup = $img_file.'#'.$svg['id'];
-															}
-															$svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
-															print_r($svg_file);
-															?>
-														</div>
+														<?$path = CFile::GetPath($arItem['PROPERTIES']['teaser3_icon']['VALUE']);?>
+														<?if (stristr($path, '.svg')):?>
+															<div class="services-item-icon">
+																<?
+																$img_file = CFile::GetPath($arItem['PROPERTIES']['teaser3_icon']['VALUE']);
+																$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
+																if($svg['id']){
+																	$img_grup = $img_file.'#'.$svg['id'];
+																}
+																$svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
+																print_r($svg_file);
+																?>
+															</div>
+														<?else:?>
+															<div class="services-item-icon">
+																<img src=<?echo CFile::GetPath($arItem["PROPERTIES"]["teaser3_icon"]["VALUE"]);?> style="width: unset;">
+															</div>
+														<?endif;?>
 													<?endif;?>
 													<span><?=$arItem["PROPERTIES"]["teaser3_title"]["VALUE"];?></span>
 												</div>
@@ -98,17 +115,24 @@ $this->setFrameMode(true);
 											<?if($arItem["PROPERTIES"]["teaser4_show"]["VALUE"]):?>
 												<div class="services-item">
 													<?if($arItem["PROPERTIES"]["teaser4_icon"]["VALUE"]):?>
-														<div class="services-item-icon">
-															<?
-															$img_file = CFile::GetPath($arItem['PROPERTIES']['teaser4_icon']['VALUE']);
-															$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
-															if($svg['id']){
-																$img_grup = $img_file.'#'.$svg['id'];
-															}
-															$svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
-															print_r($svg_file);
-															?>
-														</div>
+														<?$path = CFile::GetPath($arItem['PROPERTIES']['teaser4_icon']['VALUE']);?>
+														<?if (stristr($path, '.svg')):?>
+															<div class="services-item-icon">
+																<?
+																$img_file = CFile::GetPath($arItem['PROPERTIES']['teaser4_icon']['VALUE']);
+																$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
+																if($svg['id']){
+																	$img_grup = $img_file.'#'.$svg['id'];
+																}
+																$svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
+																print_r($svg_file);
+																?>
+															</div>
+														<?else:?>
+															<div class="services-item-icon">
+																<img src=<?echo CFile::GetPath($arItem["PROPERTIES"]["teaser4_icon"]["VALUE"]);?> style="width: unset;">
+															</div>
+														<?endif;?>
 													<?endif;?>
 													<span><?=$arItem["PROPERTIES"]["teaser4_title"]["VALUE"];?></span>
 												</div>

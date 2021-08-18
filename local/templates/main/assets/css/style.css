@@ -1123,14 +1123,14 @@ header.navs.active{
     margin: 15px 0 0 0;
     color: #FFF;
 }
-/*
+
 .features .features-box .features-item:nth-of-type(2){
     background-color: #C89D66;
 }
 .features .features-box .features-item:nth-of-type(2) i{
     color: #F1F1F1;
 }
-*/
+
 
 /* :: Features 2 */
 .features-2 .features-box{
@@ -3481,12 +3481,17 @@ body.active-dark-mode-decision,
 header.navs {
     position: absolute;
 }
+
 .features-image {
     float: left;
 
 }
 .features-image img {
     max-height: 41px;
+}
+
+.features-image svg {
+    height: 41px;
 }
 .practice-area-image {
     float: left;
@@ -3498,24 +3503,18 @@ header.navs {
     float: left;
     height: 41px;
 }
-
-/* 61 строка transition*/
 .practice-area-item svg {
-    -webkit-transition: 0.1s !important;
-    -moz-transition: 0.1s !important;
-    -o-transition: 0.1s !important;
-    transition: 0.1s !important;
-
     fill: #C89D66;
 }
 .practice-area-item:hover svg {
     fill: #ffffff;
 }
 .practice-area-item:hover svg{
-    
+
     -webkit-animation: updown 0.3s ease 40ms;
     animation: updown 0.3s ease 40ms;
 }
+
 div.bx-component-opener {
     transition: none;
 }
@@ -3526,30 +3525,60 @@ div.bx-component-opener {
     flex-wrap: wrap;
 }
 
-
-.services-item-icon {
-    margin-bottom: 15px
-}
-.services-item-icon svg{
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-
-    height: 35px;
-}
-.services-item {
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
 .services-item:hover svg {
     fill: #ffffff;
 }
+.services-item-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px
+}
+.services-item-icon svg{
+    height: 35px;
+}
+.services-item-icon img{
+    height: 35px;
+    width: unset;
+}
 
+
+.features .features-box .features-item svg{
+    fill: #C89D66;
+}
+.features .features-box .features-item:nth-of-type(2) svg{
+    fill: #F1F1F1;
+}
 /*Transitions*/
+
+.practice-area-item {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.practice-area-item svg {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
 
 .nav-bar .nav-bar-link > ul ul {
     -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.services-item {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.services-item-icon svg{
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }

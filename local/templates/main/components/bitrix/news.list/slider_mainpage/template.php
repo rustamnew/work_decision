@@ -13,68 +13,135 @@
 $this->setFrameMode(true);
 ?>
 
-<?echo '<pre>';print_r($arResult);echo '</pre>';?>
 
-<header class="header header-2" id="page">
+
+<header class="header header-2 header-3" id="page">
 	<div class="header-owl header-owl-2 owl-carousel owl-theme">
 		<?foreach($arResult["ITEMS"] as $arItem):?>
-			<?
-			$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
-			$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
-			?>
-			
-			<div class="sec-hero display-table" style="background-image: url(<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>)" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-				<div class="table-cell">
-					<div class="overlay"></div>
-					<div class="container">
-						<div class="box-hero d-flex align-items-center justify-content-between">
-							<div class="banner">
-								<div class="headline-top"><?=$arItem["NAME"]?></div>
-								<h1 class="handline"><?=$arItem["PREVIEW_TEXT"]?></h1>
-								<p class="about-website"><?=$arItem["DETAIL_TEXT"]?></p>
-								<a class="btn-1 btn-2 move-section" href="<?=$arItem["PROPERTIES"]["url"]["VALUE"];?>"><?=$arItem["PROPERTIES"]["text"]["VALUE"];?></a>
-							</div>
+			<?if(!$arItem["PROPERTIES"]["center"]["VALUE"]):?>
+				<div class="sec-hero display-table" style="background-image: url(<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>)">
+                    <div class="table-cell">
+                        <div class="overlay"></div>
+                        <div class="container">
+                            <div class="box-hero d-flex align-items-center justify-content-between">
+                                <div class="banner">
+									<div class="headline-top"><?=$arItem["NAME"]?></div>
+									<h1 class="handline"><?=$arItem["PREVIEW_TEXT"]?></h1>
+									<p class="about-website"><?=$arItem["DETAIL_TEXT"]?></p>
+									<a class="btn-1 btn-2 move-section" href="<?=$arItem["PROPERTIES"]["url"]["VALUE"];?>"><?=$arItem["PROPERTIES"]["text"]["VALUE"];?></a>
+                                </div>
+                                <?if($arItem["PROPERTIES"]["teasers_show"]["VALUE"]):?>
+									
 
-							<?if(!$arItem["PROPERTIES"]["center"]["VALUE"]):?>
-								<div class="services-header text-right">
-									<div class="line">
-										<?if($arItem["PROPERTIES"]["prop"]["VALUE"]):?>
-											<div class="services-item">
-												<i class="flaticon-act"></i>
-												<span>Business Law</span>
-											</div>
-										<?endif;?>
 
-										<?if($arItem["PROPERTIES"]["prop"]["VALUE"]):?>
-											<div class="services-item">
-												<i class="flaticon-jury"></i>
-												<span>Personal Injury</span>
-											</div>
-										<?endif;?>
+
+									<div class="services-header text-right">
+										<div class="line">
+											<?if($arItem["PROPERTIES"]["teaser1_show"]["VALUE"]):?>
+												<div class="services-item">
+													<?if($arItem["PROPERTIES"]["teaser1_icon"]["VALUE"]):?>
+														<div class="services-item-icon">
+															<?
+															$img_file = CFile::GetPath($arItem['PROPERTIES']['teaser1_icon']['VALUE']);
+															$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
+															if($svg['id']){
+																$img_grup = $img_file.'#'.$svg['id'];
+															}
+															$svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
+															print_r($svg_file);
+															?>
+														</div>
+													<?endif;?>
+													<span><?=$arItem["PROPERTIES"]["teaser1_title"]["VALUE"];?></span>
+												</div>
+											<?endif;?>
+
+											<?if($arItem["PROPERTIES"]["teaser2_show"]["VALUE"]):?>
+												<div class="services-item">
+													<?if($arItem["PROPERTIES"]["teaser2_icon"]["VALUE"]):?>
+														<div class="services-item-icon">
+															<?
+															$img_file = CFile::GetPath($arItem['PROPERTIES']['teaser2_icon']['VALUE']);
+															$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
+															if($svg['id']){
+																$img_grup = $img_file.'#'.$svg['id'];
+															}
+															$svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
+															print_r($svg_file);
+															?>
+														</div>
+													<?endif;?>
+													<span><?=$arItem["PROPERTIES"]["teaser2_title"]["VALUE"];?></span>
+												</div>
+											<?endif;?>
+										</div>
+										<div class="line">
+											<?if($arItem["PROPERTIES"]["teaser3_show"]["VALUE"]):?>
+												<div class="services-item">
+													<?if($arItem["PROPERTIES"]["teaser3_icon"]["VALUE"]):?>
+														<div class="services-item-icon">
+															<?
+															$img_file = CFile::GetPath($arItem['PROPERTIES']['teaser3_icon']['VALUE']);
+															$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
+															if($svg['id']){
+																$img_grup = $img_file.'#'.$svg['id'];
+															}
+															$svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
+															print_r($svg_file);
+															?>
+														</div>
+													<?endif;?>
+													<span><?=$arItem["PROPERTIES"]["teaser3_title"]["VALUE"];?></span>
+												</div>
+											<?endif;?>
+
+											<?if($arItem["PROPERTIES"]["teaser4_show"]["VALUE"]):?>
+												<div class="services-item">
+													<?if($arItem["PROPERTIES"]["teaser4_icon"]["VALUE"]):?>
+														<div class="services-item-icon">
+															<?
+															$img_file = CFile::GetPath($arItem['PROPERTIES']['teaser4_icon']['VALUE']);
+															$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
+															if($svg['id']){
+																$img_grup = $img_file.'#'.$svg['id'];
+															}
+															$svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
+															print_r($svg_file);
+															?>
+														</div>
+													<?endif;?>
+													<span><?=$arItem["PROPERTIES"]["teaser4_title"]["VALUE"];?></span>
+												</div>
+											<?endif;?>
+										</div>
 									</div>
-									<div class="line">
-										<?if($arItem["PROPERTIES"]["prop"]["VALUE"]):?>
-											<div class="services-item">
-												<i class="flaticon-criminal"></i>
-												<span>Criminal Law</span>
-											</div>
-										<?endif;?>
-
-										<?if($arItem["PROPERTIES"]["prop"]["VALUE"]):?>
-											<div class="services-item">
-												<i class="flaticon-libra"></i>
-												<span>Juricial Law</span>
-											</div>
-										<?endif;?>
+								<?endif;?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			<?endif;?>
+			<?if($arItem["PROPERTIES"]["center"]["VALUE"] == "Да"):?>
+				<div class="sec-hero display-table" style="background-image: url(<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>)" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
+					<div class="table-cell">
+						<div class="overlay"></div>
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-10 offset-lg-1">
+									<div class="box-hero">
+										<div class="banner banner-3 text-center">
+											<div class="headline-top"><?=$arItem["NAME"]?></div>
+											<h1 class="handline"><?=$arItem["PREVIEW_TEXT"]?></h1>
+											<p class="about-website"><?=$arItem["DETAIL_TEXT"]?></p>
+											<a class="btn-1 btn-2 move-section" href="<?=$arItem["PROPERTIES"]["url"]["VALUE"];?>"><?=$arItem["PROPERTIES"]["text"]["VALUE"];?></a>
+										</div>
 									</div>
 								</div>
-							<?endif;?>
-							
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			<?endif;?>
 		<?endforeach;?>	
 	</div>
 </header>

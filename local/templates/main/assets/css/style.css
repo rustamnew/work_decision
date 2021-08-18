@@ -56,14 +56,17 @@
 */
 
 /* :: All Transition */
-
+/*
 * {
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     outline: none;
 }
-
+*/
+*{
+    outline: none
+}
 
 /* :: Body */
 body {
@@ -3521,4 +3524,32 @@ div.bx-component-opener {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+}
+
+
+.services-item-icon {
+    margin-bottom: 15px
+}
+.services-item-icon svg{
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+
+    height: 35px;
+}
+.services-item {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.services-item:hover svg {
+    fill: #ffffff;
+}
+
+/*Transitions*/
+
+.nav-bar .nav-bar-link > ul ul {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }

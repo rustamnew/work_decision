@@ -57,18 +57,17 @@
 
 /* :: All Transition */
 
-/*
 * {
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     outline: none;
 }
-*/
+
 
 /* :: Body */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     line-height: 25px;
     color: #262B3E;
@@ -103,7 +102,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Monsterrat', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -111,7 +110,7 @@ p {
     color: #9B9B9B;
     font-size: 14px;
     font-weight: 400;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 25px;
 }
 
@@ -151,7 +150,7 @@ p {
     background-color: #C89D66;
     font-size: 13px;
     color: #FFF;
-    text-transform: capitalize;
+    
     padding: 0 40px;
     line-height: 50px;
     border-radius: 2px;
@@ -159,7 +158,7 @@ p {
     position: relative;
     display: inline-block;
     text-align: center;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     border: 2px solid #C89D66;
 }
@@ -197,14 +196,14 @@ p {
     color: #C89D66;
     display: inline-block;
     text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     position: relative;
 }
 .sec-title h3{
     color: #262B3E;
     font-size: 36px;
     font-weight: 700;
-    text-transform: capitalize;
+    
     margin-bottom: 30px;
     margin-top: 20px;
     line-height: 1.3;
@@ -214,7 +213,7 @@ p {
     font-weight: 400;
     line-height: 26px;
     margin-bottom: 0;
-    text-transform: capitalize;
+    
 }
 .sec-title-2 h2:after{
     content: '';
@@ -507,7 +506,7 @@ header.navs.active{
     margin: 0 20px 0 0px;
     position: relative;
     display: block;
-    text-transform: capitalize;
+    
 }
 .nav-bar .nav-bar-link ul li a:before{
     content: '';
@@ -573,7 +572,7 @@ header.navs.active{
     width: 100%;
     position: relative;
     font-weight: normal;
-    text-transform: capitalize;
+    
     display: inline-block;
 }
 .nav-bar .nav-bar-link > ul ul li:hover a{
@@ -624,7 +623,7 @@ header.navs.active{
     color: #F1F1F1;
     font-size: 14px;
     font-weight: 500;
-    text-transform: capitalize;
+    
     line-height: 1;
     display: block;
     margin-top: 10px;
@@ -851,7 +850,7 @@ header.navs.active{
     width: 150px;
 }
 .menu-box .inner-menu .website-info p{
-    text-transform: capitalize;
+    
     font-size: 14px;
 }
 .menu-box .inner-menu .contact-info h4,
@@ -861,7 +860,7 @@ header.navs.active{
     font-weight: 600;
     line-height: 1;
     margin-bottom: 20px;
-    text-transform: capitalize;
+    
     color: #262B3E;
 }
 .menu-box .inner-menu .contact-info .contact-box{
@@ -944,14 +943,14 @@ header.navs.active{
 }
 .header .banner .handline{
     color: #FFF;
-    text-transform: capitalize;
+    
     font-weight: 700;
     line-height: 1.2;
     font-size: 60px;
     margin-bottom: 30px;
 }
 .header .banner .about-website{
-    text-transform: capitalize;
+    
     font-size: 16px;
     color: #F9F9F9;
     font-weight: 600;
@@ -1056,7 +1055,7 @@ header.navs.active{
     font-size: 14px;
     font-weight: 600;
     line-height: 1;
-    text-transform: capitalize;
+    
 }
 
 /* :: Header 3 */
@@ -1106,13 +1105,13 @@ header.navs.active{
     font-size: 14px;
     font-weight: 600;
     line-height: 1;
-    text-transform: capitalize;
+    
     color: #F1F1F1;
 }
 .features .features-box .features-item .item-text h4{
     line-height: 1.1;
-    text-transform: capitalize;
-    font-size: 22px;
+    
+    font-size: 21px;
     font-weight: 600;
     color: #F1F1F1;
     margin-top: 8px;
@@ -1205,7 +1204,7 @@ header.navs.active{
     font-size: 18px;
     font-weight: 600;
     line-height: 1.1;
-    text-transform: capitalize;
+    
     color: #FFF;
 }
 .about .text-box .sec-title{
@@ -1233,8 +1232,8 @@ header.navs.active{
     font-size: 14px;
     font-weight: 500;
     color: #262B3E;
-    text-transform: capitalize;
-    font-family: 'Poppins', sans-serif;
+    
+    font-family: 'Montserrat', sans-serif;
 }
 .about .text-box .p-about{
     margin-bottom: 30px;
@@ -1346,7 +1345,7 @@ header.navs.active{
     line-height: 1;
 }
 .skills .skill-box .skill-top .name{
-    text-transform: capitalize;
+    
     font-size: 13px;
     line-height: 23px;
     font-weight: 600;
@@ -1411,8 +1410,8 @@ header.navs.active{
 }
 .practice-area-item .content h4{
     line-height: 1.1;
-    text-transform: capitalize;
-    font-size: 22px;
+    
+    font-size: 21px;
     font-weight: 600;
     margin-bottom: 20px;
 }
@@ -1495,7 +1494,7 @@ header.navs.active{
     line-height: 1.1;
     margin-bottom: 20px;
     text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 .history-line .box-line .down{
     position: relative;
@@ -1519,7 +1518,7 @@ header.navs.active{
     margin-bottom: 5px;
     font-size: 13px;
     font-weight: 600;
-    text-transform: capitalize;
+    
 }
 .history-line .box-line .down span:last-of-type{
     margin: 0;
@@ -1550,7 +1549,7 @@ header.navs.active{
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 20px;
-    text-transform: capitalize;
+    
     color: #FFF;
 }
 .history-2-item .content p{
@@ -1595,7 +1594,7 @@ header.navs.active{
     font-weight: 600;
     line-height: 1.2;
     display: inline-block;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin-left: 10px;
 }
 .quote .box .quote-box .sec-title{
@@ -1659,7 +1658,7 @@ header.navs.active{
     border-bottom: 1px solid rgb(249 249 249 / 0.1);
     position: relative;
     font-weight: normal;
-    text-transform: capitalize;
+    
     display: block;
     font-weight: 400;
 }
@@ -1843,7 +1842,7 @@ header.navs.active{
     background-color: #C89D66;
     font-size: 14px;
     color: #FFF;
-    text-transform: capitalize;
+    
     width: 44px;
     height: 44px;
     line-height: 44px;
@@ -1864,7 +1863,7 @@ header.navs.active{
 }
 .advisors-box .text-box h5{
     line-height: 1.3;
-    text-transform: capitalize;
+    
     font-size: 18px;
     font-weight: 600;
     color: #262B3E;
@@ -1939,11 +1938,11 @@ header.navs.active{
 }
 .provide .text-box .content-box .content-item .box h4{
     line-height: 1.1;
-    text-transform: capitalize;
+    
     font-size: 18px;
     font-weight: 600;
     color: #F1F1F1;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 .provide .text-box .content-box .content-item .box p{
     margin: 10px 0 0 0;
@@ -1990,7 +1989,7 @@ header.navs.active{
     font-size: 14px;
     font-weight: 500;
     line-height: 1;
-    text-transform: capitalize;
+    
     letter-spacing: 0.23px;
     display: inline-block;
     margin-left: 5px;
@@ -2122,7 +2121,7 @@ header.navs.active{
     line-height: 1.2;
     margin-top: 15px;
     margin-bottom: 8px;
-    text-transform: capitalize;
+    
     color: #262B3E;
     text-align: center;
 }
@@ -2133,7 +2132,7 @@ header.navs.active{
     font-size: 14px;
     font-weight: 500;
     text-align: center;
-    text-transform: capitalize;
+    
     color: #9B9B9B;
 }
 .owl-testimonial.owl-theme .owl-dots{
@@ -2280,7 +2279,7 @@ header.navs.active{
     font-size: 18px;
     line-height: 20px;
     margin-bottom: 0;
-    text-transform: capitalize;
+    
 }
 .owl-testimonial-1 .box-item .clients-talk .info span,
 .owl-testimonial-3 .box-item .clients-talk .info span{
@@ -2289,7 +2288,7 @@ header.navs.active{
     margin-bottom: 0px;
     font-size: 14px;
     font-weight: 500;
-    text-transform: capitalize;
+    
     margin-top: 10px;
     color: #C89D66;
 }
@@ -2347,7 +2346,7 @@ header.navs.active{
 }
 .blog-item .img-box ul li a{
     font-size: 13px;
-    text-transform: capitalize;
+    
 }
 .blog-item .img-box ul li:hover a{
     color: #262B3E;
@@ -2374,7 +2373,7 @@ header.navs.active{
     font-size: 14px;
     color: #262B3E;
     display: inline-block;
-    text-transform: capitalize;
+    
     font-weight: 600;
 }
 .blog-item .text-box .link:hover{
@@ -2420,7 +2419,7 @@ header.navs.active{
 .footer-title h4{
     color: #FFF;
     font-size: 16px;
-    text-transform: capitalize;
+    
     line-height: 1.2;
     margin-bottom: 25px;
 }
@@ -2442,7 +2441,7 @@ header.navs.active{
 .footer .newsletter h5{
     color: #C89D66;
     font-size: 16px;
-    text-transform: capitalize;
+    
     line-height: 1.2;
     margin-bottom: 20px;
 }
@@ -2459,7 +2458,7 @@ header.navs.active{
     color: #9B9B9B;
     background-color: transparent;
     font-size: 13px;
-    text-transform: capitalize;
+    
     padding: 0 15px;
     line-height: 44px;
     border-radius: 3px;
@@ -2566,7 +2565,7 @@ header.navs.active{
     line-height: 1.2;
     color: #FFF;
     margin-bottom: 0;
-    text-transform: capitalize;
+    
     margin-bottom: 25px;
 }
 .breadcrumb-header .banner ul li{
@@ -2577,7 +2576,7 @@ header.navs.active{
     font-weight: 500;
     letter-spacing: 0.30px;
     color: #F9F9F9;
-    text-transform: capitalize;
+    
 }
 .breadcrumb-header .banner ul li:hover a{
     color: #C89D66;
@@ -2592,7 +2591,7 @@ header.navs.active{
 .brochures h5{
     font-weight: 600;
     margin-bottom: 10px;
-    text-transform: capitalize;
+    
     color: #262B3E;
     font-size: 18px;
 }
@@ -2625,7 +2624,7 @@ header.navs.active{
     font-size: 24px;
     line-height: 1.1;
     color: #262B3E;
-    text-transform: capitalize;
+    
     font-weight: 600;
     margin-bottom: 30px;
 }
@@ -2640,7 +2639,7 @@ header.navs.active{
     font-size: 14px;
     font-weight: 500;
     line-height: 1;
-    text-transform: capitalize;
+    
     position: relative;
     border-bottom: 1px solid #E9E9E9;
 }
@@ -2669,7 +2668,7 @@ header.navs.active{
 .call-back h5{
     font-weight: 600;
     margin-bottom: 10px;
-    text-transform: capitalize;
+    
     color: #FFF;
     font-size: 18px;
 }
@@ -2689,7 +2688,7 @@ header.navs.active{
     font-size: 32px;
     line-height: 1.2;
     color: #262B3E;
-    text-transform: capitalize;
+    
     font-weight: 600;
     margin-bottom: 20px;
 }
@@ -2708,7 +2707,7 @@ header.navs.active{
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 12px;
-    text-transform: capitalize;
+    
     color: #687076;
 }
 .faq .faq-box{
@@ -2729,7 +2728,7 @@ header.navs.active{
     color: #262B3E;
     font-weight: 600;
     line-height: 25px;
-    text-transform: capitalize;
+    
     position: relative;
     width: 100%;
     text-align: left;
@@ -2777,7 +2776,7 @@ header.navs.active{
 }
 .widget .widget-title h3{
     line-height: 1.2;
-    text-transform: capitalize;
+    
     color: #262B3E;
     position: relative;
     font-size: 18px;
@@ -2877,7 +2876,7 @@ header.navs.active{
     padding: 15px 0;
     display: block;
     line-height: 15px;
-    text-transform: capitalize;
+    
     color: #A5A5A5;
 }
 .widget .categories ul li:first-of-type a{
@@ -3001,7 +3000,7 @@ header.navs.active{
 .single-bolg .item-comments .title h4,
 .single-bolg .add-comments .title h4{
     line-height: 14px;
-    text-transform: capitalize;
+    
     color: #223645;
     position: relative;
     font-size: 18px;
@@ -3039,7 +3038,7 @@ header.navs.active{
     font-size: 18px;
     font-weight: 600;
     line-height: 23px;
-    text-transform: capitalize;
+    
     margin-bottom: 5px;
 }
 .single-bolg .item-comments .inner-comments .comments-box .text-box .time{
@@ -3126,7 +3125,7 @@ header.navs.active{
     font-size: 14px;
     color: #C89D66;
     display: inline-block;
-    text-transform: capitalize;
+    
     font-weight: 600;
 }
 
@@ -3185,7 +3184,7 @@ header.navs.active{
     color: #262B3E;
     font-weight: bold;
     margin-bottom: 20px;
-    text-transform: capitalize;
+    
 }
 .shop.area .text-box-details .item-review span{
     display: inline-block;
@@ -3484,5 +3483,42 @@ header.navs {
 
 }
 .features-image img {
-    height: 40px;
+    max-height: 41px;
+}
+.practice-area-image {
+    float: left;
+}
+.practice-area-image img {
+    height: 41px;
+}
+.practice-area-image svg {
+    float: left;
+    height: 41px;
+}
+
+/* 61 строка transition*/
+.practice-area-item svg {
+    -webkit-transition: 0.1s !important;
+    -moz-transition: 0.1s !important;
+    -o-transition: 0.1s !important;
+    transition: 0.1s !important;
+
+    fill: #C89D66;
+}
+.practice-area-item:hover svg {
+    fill: #ffffff;
+}
+.practice-area-item:hover svg{
+    
+    -webkit-animation: updown 0.3s ease 40ms;
+    animation: updown 0.3s ease 40ms;
+}
+div.bx-component-opener {
+    transition: none;
+}
+.row.incl_area > div {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 }

@@ -7,11 +7,6 @@ $arTemplateParameters = array(
 		"TYPE" => "CHECKBOX",
 		"DEFAULT" => "Y",
 	),
-	"DISPLAY_NAME" => Array(
-		"NAME" => GetMessage("T_IBLOCK_DESC_NEWS_NAME"),
-		"TYPE" => "CHECKBOX",
-		"DEFAULT" => "Y",
-	),
 	"DISPLAY_PICTURE" => Array(
 		"NAME" => GetMessage("T_IBLOCK_DESC_NEWS_PICTURE"),
 		"TYPE" => "CHECKBOX",
@@ -29,7 +24,7 @@ $arTemplateParameters = array(
 		"VALUE" => "Y",
 		"DEFAULT" =>"N",
 		"REFRESH"=> "Y",
-	),	
+	),
 );
 
 if ($arCurrentValues["USE_SHARE"] == "Y")

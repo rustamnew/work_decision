@@ -125,9 +125,9 @@ $APPLICATION->SetTitle('Главная');
 	)
 );?>
 <?$APPLICATION->IncludeComponent(
-	"bitrix:news.list",
-	"team-block",
-	Array(
+	"bitrix:news.list", 
+	"team-list", 
+	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
@@ -142,20 +142,23 @@ $APPLICATION->SetTitle('Главная');
 		"CHECK_DATES" => "Y",
 		"DETAIL_URL" => "",
 		"DISPLAY_BOTTOM_PAGER" => "N",
-		"DISPLAY_DATE" => "Y",
-		"DISPLAY_NAME" => "Y",
-		"DISPLAY_PICTURE" => "Y",
-		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"DISPLAY_DATE" => "N",
+		"DISPLAY_NAME" => "N",
+		"DISPLAY_PICTURE" => "N",
+		"DISPLAY_PREVIEW_TEXT" => "N",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array("",""),
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "9",
+		"IBLOCK_ID" => "5",
 		"IBLOCK_TYPE" => "content",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "N",
 		"MESSAGE_404" => "",
-		"NEWS_COUNT" => "1",
+		"NEWS_COUNT" => "12",
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
@@ -166,7 +169,11 @@ $APPLICATION->SetTitle('Главная');
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array("title",""),
+		"PROPERTY_CODE" => array(
+			0 => "",
+			1 => "title",
+			2 => "",
+		),
 		"SET_BROWSER_TITLE" => "N",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "N",
@@ -178,8 +185,13 @@ $APPLICATION->SetTitle('Главная');
 		"SORT_BY2" => "ID",
 		"SORT_ORDER1" => "ASC",
 		"SORT_ORDER2" => "ASC",
-		"STRICT_SECTION_CHECK" => "N"
-	)
+		"STRICT_SECTION_CHECK" => "N",
+		"COMPONENT_TEMPLATE" => "team-list",
+		"NAME" => "Команда",
+		"TITLE" => "Наши специалисты",
+		"SUBTITLE" => "Решения принимаются профессионалами. Мы гарантируем высокое качество оказания услуг."
+	),
+	false
 );?>
 
 <?

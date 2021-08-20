@@ -167,6 +167,30 @@
         }
     });
 
+    // :: OWL Carousel Js Case Study
+    $('.owl-advisors').owlCarousel({
+        loop: false,
+        margin: 30,
+        smartSpeed: 1000,
+        autoplay: 2000,
+        nav: true,
+        autoplayHoverPause: true,
+        mouseDrag: true,
+        touchDrag: true,
+        navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"],
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            991: {
+                items: 3
+            }
+        }
+    });
+
     // :: NiceSelect Plugin
     $('select').niceSelect();
 

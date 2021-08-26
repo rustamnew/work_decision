@@ -13,46 +13,81 @@
 $this->setFrameMode(true);
 ?>
 
-<?foreach($arResult["ITEMS"] as $arItem):?>
-	<?$path = CFile::GetPath($arItem['PROPERTIES']['icon']['VALUE']);?>
+<?$iblock_id = $arParams["IBLOCK_ID"];?>
 
-	<?if (stristr($path, '.svg')):?>
-		<?
-		$img_file = CFile::GetPath($arItem['PROPERTIES']['icon']['VALUE']);
-		$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
-		if($svg['id']){
-			$img_grup = $img_file.'#'.$svg['id'];
-		}
-		$svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
-		?>
-	<?endif;?>
 
-	<?
-	$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
-	$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
-	?>
-	
-	<div class="col-md-6 col-lg-4">
-		<div class="practice-area-item" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-			<?if (stristr($path, '.svg')):?>
-				<div class="practice-area-image">
-					<?print_r($svg_file);?>
+<section class="practice-area py-100-70" style="background-image: url(<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>)" >
+	<div class="container" >
+		<div class="row" >
+			<div class="col-md-8 offset-md-2">
+				<div class="sec-title text-center">
+					<h2><?=$arParams["NAME"]?></h2>
+					<h3><?=$arParams["TITLE"];?></h3>
+					<p><?=$arParams["SUBTITLE"]?></p>
 				</div>
-			<?else:?>
-				<div class="practice-area-image">
-					<img src="<?echo CFile::GetPath($arItem["PROPERTIES"]["icon"]["VALUE"]);?>" alt="icon">
-				</div>
-			<?endif;?>
-
-			<div class="content">
-				<h4><?=$arItem["NAME"]?></h4>
-				<p><?=$arItem["PREVIEW_TEXT"]?></p>
-				<a href="<?=$arItem["DETAIL_PAGE_URL"]?>">Читать далее</a>
 			</div>
 		</div>
+		<div class="row">
+			<?
+			$arSelect = array("UF_*");
+			$arFilter = Array('IBLOCK_ID'=>$iblock_id, 'GLOBAL_ACTIVE'=>'Y');
+			$list = CIBlockSection::GetList(Array("SORT"=>"ASC"), $arFilter, true, $arSelect);
+
+			while($ar_result = $list->GetNext()){?>
+				<?$path = CFile::GetPath($ar_result["UF_ICON"]);?>
+				<?$section_link = $ar_result["SECTION_PAGE_URL"];?>
+
+				<?if (stristr($path, '.svg')):?>
+					<?
+					$img_file = $path;
+					$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
+					if($svg['id']){
+						$img_grup = $img_file.'#'.$svg['id'];
+					}
+					$svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
+					?>
+				<?endif;?>
+
+				<div class="col-md-6 col-lg-4">
+					<div class="practice-area-item">
+						<?if (stristr($path, '.svg')):?>
+							<div class="practice-area-image">
+								<?print_r($svg_file);?>
+							</div>
+						<?else:?>
+							<div class="practice-area-image">
+								<img src="<?$path?>" alt="icon">
+							</div>
+						<?endif;?>
+
+						<div class="content">
+							<h4><?=$ar_result["NAME"]?></h4>
+							<ul>
+								<?
+								$arSelect = Array("ID", "NAME", "DETAIL_PAGE_URL", "EDIT_LINK", "DELETE_LINK");
+								$arFilter = Array("IBLOCK_ID"=>$iblock_id, "IBLOCK_SECTION_ID"=> $ar_result["ID"],"GLOBAL_ACTIVE"=>"Y");
+								$res = CIBlockElement::GetList(Array("SORT"=>"ASC"), $arFilter, false, false, $arSelect);
+
+								while($ob = $res->GetNextElement()) {
+									$arFields = $ob->GetFields();?>
+									<li><a href="<?=$arFields["DETAIL_PAGE_URL"]?>"><?=$arFields["NAME"]?></a></li>
+									
+								<?}?>
+							</ul>
+							<a href="<?=$section_link;?>">Читать далее</a>
+						</div>
+					</div>
+				</div>
+			<?}?>
+		</div>
 	</div>
-<?endforeach;?>
+</section>
+
+
+
 		
+
+
 
 
 

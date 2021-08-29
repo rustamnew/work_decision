@@ -37,5 +37,10 @@ $arTemplateParameters = array(
 		"TYPE" => "STRING",
 		"DEFAULT" => "",
 	),
+	"MINIMIZE_TITLE" => Array(
+		"NAME" => GetMessage("MINIMIZE_TITLE"),
+		"TYPE" => "CHECKBOX",
+		"DEFAULT" => "",
+	),
 );
 ?>

@@ -16,18 +16,24 @@ $this->setFrameMode(true);
 
 
 
-
+<?if(!$arParams["MINIMIZE_TITLE"] || $arParams["MINIMIZE_TITLE"] == "N"):?>
 <section class="bolg py-100-70">
 	<div class="container">
-		<div class="row">
-			<div class="col-md-8 offset-md-2">
-				<div class="sec-title text-center">
-					<h2><?=$arParams["NAME"]?></h2>
-					<h3><?=$arParams["TITLE"];?></h3>
-					<p><?=$arParams["SUBTITLE"]?></p>
+<?endif;?>
+		<?if($arParams["MINIMIZE_TITLE"] == "Y"):?>
+			<h4><?=$arParams["TITLE"];?></h4>
+		<?else:?>
+			<div class="row">
+				<div class="col-md-8 offset-md-2">
+					<div class="sec-title text-center">
+						<h2><?=$arParams["NAME"]?></h2>
+						<h3><?=$arParams["TITLE"];?></h3>
+						<p><?=$arParams["SUBTITLE"]?></p>
+					</div>
 				</div>
 			</div>
-		</div>
+		<?endif;?>
+
 		<div class="row">
 			<?foreach($arResult["ITEMS"] as $arItem):?>
 
@@ -56,7 +62,12 @@ $this->setFrameMode(true);
 				?>
 				
 
-				<div class="col-md-6 col-lg-4">
+				<?if($arParams["MINIMIZE_TITLE"] == "Y"):?>
+					<div class="col-md-6 col-lg-6">
+				<?else:?>
+					<div class="col-md-6 col-lg-4">
+				<?endif;?>
+				
 					<div class="blog-item" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
 						<div class="img-box">
 							<a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="open-post">
@@ -81,5 +92,7 @@ $this->setFrameMode(true);
 				</div>
 			<?endforeach;?>
 		</div>
+<?if(!$arParams["MINIMIZE_TITLE"] || $arParams["MINIMIZE_TITLE"] == "N"):?>
 	</div>
 </section>
+<?endif;?>

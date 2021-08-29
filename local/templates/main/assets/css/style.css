@@ -3611,7 +3611,7 @@ div.bx-component-opener {
     right: 3%;
     top: 50%;
     transform: translateY(-50%);
-    width: 10%;
+    width: 23%;
     text-align: right;
 }
 
@@ -3640,7 +3640,7 @@ div.bx-component-opener {
 }
 
 .accordion .submenu a {
-    padding: 10px 10px 10px 42px;
+    padding: 8px 10px 8px 42px;
     
 }
 
@@ -3678,6 +3678,67 @@ div.bx-component-opener {
 .services-pagination a{
     color: #262B3E;
 }
+
+
+.blog-item-tags a{
+    color: #ffffff !important;
+}
+
+.bolg .blog-date {
+    font-size: 18px;
+}
+
+.bolg .blog-item .text-box .title-blog h5{
+    margin-top: 7px;
+}
+
+.news-item .item-content a.title-blog {
+    padding-right: 10px;
+}
+
+.news-item img {
+    max-width: 60px;
+    height: auto;
+    max-height: 60px;
+}
+
+.news-img {
+    background-size: cover;
+    background-position: center;
+    height: 60px;
+    width: 60px;
+    float: left;
+}
+.pagination-area li {
+    position: relative;
+}
+.pagination-area li:hover {
+    background-color: #C89D66;
+    border-color: #C89D66;
+}
+
+.pagination-area li a {
+    color: #262B3E;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.pagination-area li:hover a{
+    color: #FFF;
+}
+
+.news-item .item-content a.title-blog h5 {
+    color: #828282;
+    margin-bottom: 10px;
+}
+
+
+.bolg.py-100 .col-lg-4 > div {
+    margin-bottom: 40px;
+}
+
 
 
 /*Transitions*/

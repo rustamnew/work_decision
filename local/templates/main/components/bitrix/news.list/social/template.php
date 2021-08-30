@@ -21,24 +21,124 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 ?>
 
 <ul class="icon-follow" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-	<?if($arItem["PROPERTIES"]["link_Vk"]["VALUE"]):?>
-		<li><a class="icon" href="<?=$arItem["PROPERTIES"]["link_Vk"]["VALUE"];?>"><i class="fab fa-vk"></i></a></li>
+	<?if($arItem["PROPERTIES"]["link1"]["VALUE"]):?>
+		<?$path = CFile::GetPath($arItem['PROPERTIES']['icon1']['VALUE']);?>
+
+		<li>
+			<a class="icon" href="<?=$arItem["PROPERTIES"]["link1"]["VALUE"];?>">
+				<?if (stristr($path, '.svg')):?>
+					<?
+					$img_file = CFile::GetPath($arItem['PROPERTIES']['icon1']['VALUE']);
+
+					$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
+					if($svg['id']){
+						$img_grup = $img_file.'#'.$svg['id'];
+					}
+
+					$svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
+					print_r($svg_file);
+					?>
+				<?else:?>
+					<img src=<?echo CFile::GetPath($arItem["PROPERTIES"]["icon1"]["VALUE"]);?>>
+				<?endif;?>
+			</a>
+		</li>
 	<?endif;?>
 
-	<?if($arItem["PROPERTIES"]["link_Instagram"]["VALUE"]):?>
-		<li><a class="icon" href="<?=$arItem["PROPERTIES"]["link_Instagram"]["VALUE"];?>"><i class="fab fa-instagram"></i></a></li>
+	<?if($arItem["PROPERTIES"]["link2"]["VALUE"]):?>
+		<?$path = CFile::GetPath($arItem['PROPERTIES']['icon2']['VALUE']);?>
+
+		<li>
+			<a class="icon" href="<?=$arItem["PROPERTIES"]["link2"]["VALUE"];?>">
+				<?if (stristr($path, '.svg')):?>
+					<?
+					$img_file = CFile::GetPath($arItem['PROPERTIES']['icon2']['VALUE']);
+
+					$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
+					if($svg['id']){
+						$img_grup = $img_file.'#'.$svg['id'];
+					}
+
+					$svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
+					print_r($svg_file);
+					?>
+				<?else:?>
+					<img src=<?echo CFile::GetPath($arItem["PROPERTIES"]["icon2"]["VALUE"]);?>>
+				<?endif;?>
+			</a>
+		</li>
 	<?endif;?>
 
-	<?if($arItem["PROPERTIES"]["link_Facebook"]["VALUE"]):?>
-		<li><a class="icon" href="<?=$arItem["PROPERTIES"]["link_Facebook"]["VALUE"];?>"><i class="fab fa-facebook-f"></i></a></li>
+	<?if($arItem["PROPERTIES"]["link3"]["VALUE"]):?>
+		<?$path = CFile::GetPath($arItem['PROPERTIES']['icon3']['VALUE']);?>
+
+		<li>
+			<a class="icon" href="<?=$arItem["PROPERTIES"]["link3"]["VALUE"];?>">
+				<?if (stristr($path, '.svg')):?>
+					<?
+					$img_file = CFile::GetPath($arItem['PROPERTIES']['icon3']['VALUE']);
+
+					$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
+					if($svg['id']){
+						$img_grup = $img_file.'#'.$svg['id'];
+					}
+
+					$svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
+					print_r($svg_file);
+					?>
+				<?else:?>
+					<img src=<?echo CFile::GetPath($arItem["PROPERTIES"]["icon2"]["VALUE"]);?>>
+				<?endif;?>
+			</a>
+		</li>
 	<?endif;?>
 
-	<?if($arItem["PROPERTIES"]["link_Twitter"]["VALUE"]):?>
-		<li><a class="icon" href="<?=$arItem["PROPERTIES"]["link_Twitter"]["VALUE"];?>"><i class="fab fa-twitter"></i></a></li>
+	<?if($arItem["PROPERTIES"]["link4"]["VALUE"]):?>
+		<?$path = CFile::GetPath($arItem['PROPERTIES']['icon4']['VALUE']);?>
+
+		<li>
+			<a class="icon" href="<?=$arItem["PROPERTIES"]["link4"]["VALUE"];?>">
+				<?if (stristr($path, '.svg')):?>
+					<?
+					$img_file = CFile::GetPath($arItem['PROPERTIES']['icon4']['VALUE']);
+
+					$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
+					if($svg['id']){
+						$img_grup = $img_file.'#'.$svg['id'];
+					}
+
+					$svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
+					print_r($svg_file);
+					?>
+				<?else:?>
+					<img src=<?echo CFile::GetPath($arItem["PROPERTIES"]["icon4"]["VALUE"]);?>>
+				<?endif;?>
+			</a>
+		</li>
 	<?endif;?>
 
-	<?if($arItem["PROPERTIES"]["link_Youtube"]["VALUE"]):?>
-		<li><a class="icon" href="<?=$arItem["PROPERTIES"]["link_Youtube"]["VALUE"];?>"><i class="fab fa-youtube"></i></a></li>
+	<?if($arItem["PROPERTIES"]["link5"]["VALUE"]):?>
+		<?$path = CFile::GetPath($arItem['PROPERTIES']['icon5']['VALUE']);?>
+
+		<li>
+			<a class="icon" href="<?=$arItem["PROPERTIES"]["link5"]["VALUE"];?>">
+				<?if (stristr($path, '.svg')):?>
+					<?
+					$img_file = CFile::GetPath($arItem['PROPERTIES']['icon5']['VALUE']);
+
+					$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
+					if($svg['id']){
+						$img_grup = $img_file.'#'.$svg['id'];
+					}
+
+					$svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
+					print_r($svg_file);
+					?>
+				<?else:?>
+					<img src=<?echo CFile::GetPath($arItem["PROPERTIES"]["icon5"]["VALUE"]);?>>
+				<?endif;?>
+			</a>
+		</li>
 	<?endif;?>
 </ul>
 

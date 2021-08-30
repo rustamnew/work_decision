@@ -3479,6 +3479,11 @@ body.active-dark-mode-decision,
 
 
 
+
+
+
+
+
 .page-wrapper {
     position: relative;
 }
@@ -3741,6 +3746,32 @@ div.bx-component-opener {
 
 
 
+.footer ul li a.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer ul li a.icon svg {
+    height: 15px;
+    fill: #ffffff;
+}
+.footer ul li:hover a.icon svg {
+    fill: #C89D66;
+}
+
+
+
+.widget .widget-body .follow .icon li a.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.widget .widget-body .follow .icon li a.icon svg {
+    height: 15px;
+    fill: #ffffff;
+}
+
+
 /*Transitions*/
 
 .practice-area-item {
@@ -3770,6 +3801,24 @@ div.bx-component-opener {
     transition: all 0.3s ease;
 }
 .services-item-icon svg{
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.footer .logo ul li {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.footer .logo ul li a svg {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.widget .widget-body .follow .icon li a.icon {
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;

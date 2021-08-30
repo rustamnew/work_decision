@@ -3773,6 +3773,8 @@ div.bx-component-opener {
 }
 
 
+
+
 /*Transitions*/
 
 .practice-area-item {
@@ -3820,6 +3822,13 @@ div.bx-component-opener {
     transition: all 0.3s ease;
 }
 .widget .widget-body .follow .icon li a.icon {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.owl-case-study .case-study-item > span {
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;

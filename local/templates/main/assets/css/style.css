@@ -2276,7 +2276,8 @@ header.navs.active{
 }
 .owl-testimonial-1 .box-item .clients-talk .info h5,
 .owl-testimonial-3 .box-item .clients-talk .info h5{
-    color: #FFF;
+    //color: #FFF;
+    color: #262B3E;
     padding-top: 8px;
     font-weight: 600;
     font-size: 18px;

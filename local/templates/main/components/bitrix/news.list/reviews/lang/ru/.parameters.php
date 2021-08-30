@@ -6,5 +6,4 @@ $MESS ['T_IBLOCK_DESC_NEWS_TEXT'] = "Выводить текст анонса";
 $MESS ['NAME'] = "Название";
 $MESS ['TITLE'] = "Заголовок";
 $MESS ['SUBTITLE'] = "Подзаголовок";
-$MESS ['MINIMIZE_TITLE'] = "Минимизировать заголовок";
 ?>

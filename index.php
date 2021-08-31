@@ -206,7 +206,7 @@ $APPLICATION->SetTitle('Главная');
 );?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
-	"team-list", 
+	"team-list-slider", 
 	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "N",
@@ -266,7 +266,7 @@ $APPLICATION->SetTitle('Главная');
 		"SORT_ORDER1" => "ASC",
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N",
-		"COMPONENT_TEMPLATE" => "team-list",
+		"COMPONENT_TEMPLATE" => "team-list-slider",
 		"NAME" => "Команда",
 		"TITLE" => "Наши специалисты",
 		"SUBTITLE" => "Решения принимаются профессионалами. Мы гарантируем высокое качество оказания услуг."

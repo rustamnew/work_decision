@@ -61,7 +61,7 @@ $this->setFrameMode(true);
 							</div>
 						</div>
 						<div class="text-box text-center">
-							<h5><?=$arItem["NAME"]?></h5>
+							<a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><h5><?=$arItem["NAME"]?></h5></a>
 							<span><?=$arItem["PROPERTIES"]["speciality"]["VALUE"];?></span>
 						</div>
 					</div>

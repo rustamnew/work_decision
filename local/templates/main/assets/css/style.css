@@ -3773,7 +3773,16 @@ div.bx-component-opener {
 }
 
 
+a:not([href]):not([class]) {
+    color: #ffffff;
+}
+a:not([href]):not([class]):hover {
+    color: #ffffff;
+}
 
+.blog-item .img-box ul li:hover a:not([href]):not([class]) {
+    color: #ffffff;
+}
 
 /*Transitions*/
 

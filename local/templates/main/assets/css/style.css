@@ -3856,3 +3856,9 @@ a:not([href]):not([class]):hover {
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
+.blog-item .img-box ul li a {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}

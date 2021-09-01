@@ -3784,6 +3784,13 @@ a:not([href]):not([class]):hover {
     color: #ffffff;
 }
 
+.header-2 .box-hero .services-header .services-item span {
+    color: #262B3E;
+}
+.header-2 .box-hero .services-header .services-item:hover span {
+    color: #ffffff;
+}
+
 /*Transitions*/
 
 .practice-area-item {
@@ -3838,6 +3845,12 @@ a:not([href]):not([class]):hover {
 }
 
 .owl-case-study .case-study-item > span {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.header-2 .box-hero .services-header .services-item span {
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;

@@ -3791,6 +3791,13 @@ a:not([href]):not([class]):hover {
     color: #ffffff;
 }
 
+.case-about-image {
+    margin-bottom: 18px;
+}
+.case-about-image svg{
+    height: 36px;
+    fill: #ffffff;
+}
 /*Transitions*/
 
 .practice-area-item {

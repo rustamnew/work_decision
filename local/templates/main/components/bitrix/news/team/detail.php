@@ -12,9 +12,10 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
+
 <?$ElementID = $APPLICATION->IncludeComponent(
 	"bitrix:news.detail",
-	"",
+	"team-detail",
 	Array(
 		"DISPLAY_DATE" => $arParams["DISPLAY_DATE"],
 		"DISPLAY_NAME" => $arParams["DISPLAY_NAME"],

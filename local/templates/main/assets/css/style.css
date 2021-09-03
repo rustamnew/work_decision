@@ -3860,6 +3860,23 @@ a:not([href]):not([class]):hover {
 .history.without_video .bg-section {
     height: 100%;
 }
+
+.partners-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.partners-list li {
+    margin-right: 30px;
+}
+.partners-list li:last-child {
+    margin-right: 0;
+}
+
+
+
+
 /*Transitions*/
 
 .practice-area-item {

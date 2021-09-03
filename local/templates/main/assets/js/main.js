@@ -167,7 +167,7 @@
         }
     });
 
-    // :: OWL Carousel Js Case Study
+    // :: OWL Carousel Js Advisors
     $('.owl-advisors').owlCarousel({
         loop: false,
         margin: 30,
@@ -187,6 +187,30 @@
             },
             991: {
                 items: 3
+            }
+        }
+    });
+
+    // :: OWL Carousel Js Partners
+    $('.owl-partners').owlCarousel({
+        loop: false,
+        margin: 30,
+        smartSpeed: 1000,
+        
+        
+        
+        mouseDrag: true,
+        touchDrag: true,
+        
+        responsive: {
+            0: {
+                items: 2
+            },
+            320: {
+                items: 3
+            },
+            768: {
+                items: 6
             }
         }
     });

@@ -243,7 +243,7 @@ p {
     right: 0;
 }
 .bg-section {
-    background-image: url(../images/history/01_history.jpg);
+    background-color: #F9F9F9;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -3496,6 +3496,8 @@ header.navs {
     float: left;
 
 }
+
+
 .features-image img {
     max-height: 41px;
 }
@@ -3503,9 +3505,13 @@ header.navs {
 .features-image svg {
     height: 41px;
 }
+
+
 .practice-area-image {
     float: left;
 }
+
+
 .practice-area-image img {
     height: 41px;
 }
@@ -3513,6 +3519,8 @@ header.navs {
     float: left;
     height: 41px;
 }
+
+
 .practice-area-item {
     width: 100%
 }
@@ -3572,6 +3580,8 @@ div.bx-component-opener {
     justify-content: center;
     margin-bottom: 15px
 }
+
+
 .services-item-icon svg{
     height: 35px;
 }
@@ -3752,10 +3762,17 @@ div.bx-component-opener {
     justify-content: center;
     align-items: center;
 }
+
+
+.footer ul li a.icon img {
+    height: 15px;
+}
 .footer ul li a.icon svg {
     height: 15px;
     fill: #ffffff;
 }
+
+
 .footer ul li:hover a.icon svg {
     fill: #C89D66;
 }
@@ -3770,6 +3787,9 @@ div.bx-component-opener {
 .widget .widget-body .follow .icon li a.icon svg {
     height: 15px;
     fill: #ffffff;
+}
+.widget .widget-body .follow .icon li a.icon img {
+    height: 15px;
 }
 
 
@@ -3797,6 +3817,46 @@ a:not([href]):not([class]):hover {
 .case-about-image svg{
     height: 36px;
     fill: #ffffff;
+}
+.case-about-image img{
+    height: 36px;
+}
+
+
+.history-2-item .history-2-item-image {
+   float: left; 
+}
+
+
+.history-2-item .history-2-item-image svg{
+    height: 40px;
+    fill: #ffffff;
+}
+.history-2-item .history-2-item-image img{
+    height: 40px;
+}
+
+
+.history.without_video {
+    padding-bottom: 100px;
+}
+.history.without_video .bg-section {
+    height: 100%;
+}
+.history.without_back .sec-title h3 {
+    color: #262B3E;
+}
+.history.without_back .sec-title p {
+    color: #9B9B9B;
+}
+.history.without_back .content h4 {
+    color: #262B3E;
+}
+.history.without_back .content p {
+    color: #262B3E;
+}
+.history.without_back svg {
+    fill: unset;
 }
 /*Transitions*/
 

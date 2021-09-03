@@ -22,7 +22,7 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 
 
 <section class="history history-2 
-<?if(!$arItem["PREVIEW_PICTURE"]["SRC"]):?>without_back<?endif;?>
+<?if(!$arItem["PREVIEW_PICTURE"]["SRC"]):?>without_back<?endif;?> 
 <?if($arItem["PROPERTIES"]["video_show"]["VALUE"] == 'N' || !$arItem["PROPERTIES"]["video_show"]["VALUE"]):?>without_video<?endif;?>"
 id="<?=$this->GetEditAreaId($arItem['ID']);?>" >
 

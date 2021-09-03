@@ -3837,12 +3837,7 @@ a:not([href]):not([class]):hover {
 }
 
 
-.history.without_video {
-    padding-bottom: 100px;
-}
-.history.without_video .bg-section {
-    height: 100%;
-}
+
 .history.without_back .sec-title h3 {
     color: #262B3E;
 }
@@ -3857,6 +3852,13 @@ a:not([href]):not([class]):hover {
 }
 .history.without_back svg {
     fill: unset;
+}
+
+.history.without_video {
+    padding-bottom: 100px;
+}
+.history.without_video .bg-section {
+    height: 100%;
 }
 /*Transitions*/
 

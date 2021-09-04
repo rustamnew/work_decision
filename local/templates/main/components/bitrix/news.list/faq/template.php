@@ -12,7 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<section class="faqs faqs-page py-100-70">
+<section class="faqs py-100-70">
 	<div class="container">
 		<div class="sec-title">
 			<div class="row">
@@ -25,7 +25,7 @@ $this->setFrameMode(true);
 				</div>
 			</div>
 		</div>
-		<div class="row faq faq-page" id="faqSite">
+		<div class="row faq" id="faqSite">
 
 			<?if($arParams["EXPAND"] == 'Y'):?>
 				<div class="col">

@@ -95,7 +95,7 @@ a:hover,
 a:focus,
 button:focus {
     text-decoration: none;
-    color: #FFF;
+    /*color: #FFF;*/
 }
 
 /* :: Typography */
@@ -3258,7 +3258,7 @@ header.navs.active{
 
 /* :: 404 Error Page */
 .page-404-area{
-    padding: 150px 0;
+    padding: 100px 0;
 }
 .page-404-area h2{
     font-size: 250px;
@@ -3877,6 +3877,14 @@ a:not([href]):not([class]):hover {
 }
 
 
+.breadcrumb-header a {
+    color: #FFF;
+}
+
+.page-404-area p {
+    font-size: 24px;
+    margin-top: 3rem;
+}
 
 
 /*Transitions*/

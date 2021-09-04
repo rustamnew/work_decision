@@ -1753,9 +1753,10 @@ header.navs.active{
             transform: translateY(10px);
     visibility: hidden;
     opacity: 0;
+    /*
     -webkit-transition-delay: 0.2s;
          -o-transition-delay: 0.2s;
-            transition-delay: 0.2s;
+            transition-delay: 0.2s;*/
 }
 .case-study-item .hover-box .text-box h4 a{
     color: #FFF;
@@ -1769,9 +1770,10 @@ header.navs.active{
             transform: translateY(10px);
     visibility: hidden;
     opacity: 0;
+    /*
     -webkit-transition-delay: 0.4s;
          -o-transition-delay: 0.4s;
-            transition-delay: 0.4s;
+            transition-delay: 0.4s;*/
 }
 .case-study-item:hover .hover-box .text-box .tags a,
 .case-study-item:hover .hover-box .text-box h4 a{

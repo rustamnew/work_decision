@@ -3806,6 +3806,10 @@ a:not([href]):not([class]):hover {
     color: #ffffff;
 }
 
+.blog-item .img-box ul li a {
+    color: #ffffff;
+}
+
 .header-2 .box-hero .services-header .services-item span {
     color: #262B3E;
 }

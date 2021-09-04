@@ -75,7 +75,10 @@ $this->setFrameMode(true);
 		"SORT_ORDER1" => "ASC",
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N",
-		"COMPONENT_TEMPLATE" => "team-list"
+		"COMPONENT_TEMPLATE" => "team-list",
+		"NAME" => "Команда",
+		"TITLE" => "Наши специалисты",
+		"SUBTITLE" => "Решения принимаются профессионалами. Мы гарантируем высокое качество оказания услуг."
 	),
 	false
 );?>

@@ -3911,6 +3911,31 @@ form .col.captcha {
 }
 
 
+
+section.provide .content-item-icon {
+    float: left;
+}
+section.provide .content-item-icon svg{
+    height: 40px;
+    fill: #C89D66;
+}
+section.provide .content-item-icon img{
+    height: 40px;
+}
+
+section.provide .img-box .statistic-item-icon {
+    margin-bottom: 30px;
+    display: block;
+}
+section.provide .img-box .statistic-item-icon svg{
+    height: 50px;
+    fill: #C89D66;
+}
+section.provide .img-box .statistic-item-icon img{
+    height: 50px;
+}
+
+
 /*Transitions*/
 
 .practice-area-item {

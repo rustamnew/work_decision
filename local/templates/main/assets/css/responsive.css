@@ -224,8 +224,17 @@
         padding: 80px;
     }
     
-    /* :: Presentation */
+    /* :: Presentation 
     .presentation-box{
+        top: auto;
+        bottom: calc(600px - 30px);
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+    }
+    */
+    section.provide .presentation-box{
         top: auto;
         bottom: calc(600px - 30px);
         left: 50%;

@@ -3935,6 +3935,11 @@ section.provide .img-box .statistic-item-icon img{
     height: 50px;
 }
 
+.about-4 .logo-box svg {
+    fill: #ffffff;
+    height: 40px;
+}
+
 
 /*Transitions*/
 

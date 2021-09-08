@@ -36,7 +36,7 @@ $this->setFrameMode(true);
 	<div class="col-md-12">
 		<div class="blog-item">
 			<div class="img-box">
-				<a href="02_blog.html" class="open-post">
+				<a href="<?=$arResult["DETAIL_PAGE_URL"]?>" class="open-post">
 					<img class="img-fluid" src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>" alt="01 Blog">
 				</a>
 				<?if($arResult["TAGS"]):?>

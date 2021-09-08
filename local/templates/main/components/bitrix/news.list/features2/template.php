@@ -23,10 +23,9 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 
 <section class="history history-2 
 <?if(!$arItem["PREVIEW_PICTURE"]["SRC"]):?>without_back<?endif;?> 
-<?if($arItem["PROPERTIES"]["video_show"]["VALUE"] == 'N' || !$arItem["PROPERTIES"]["video_show"]["VALUE"]):?>without_video<?endif;?>"
-id="<?=$this->GetEditAreaId($arItem['ID']);?>" >
+<?if($arItem["PROPERTIES"]["video_show"]["VALUE"] == 'N' || !$arItem["PROPERTIES"]["video_show"]["VALUE"]):?>without_video<?endif;?>">
 
-	<div class="bg-section" <?if($arItem["PREVIEW_PICTURE"]["SRC"]):?> style="background-image: url(<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>)" <?endif;?>>
+	<div class="bg-section" id="<?=$this->GetEditAreaId($arItem['ID']);?>" <?if($arItem["PREVIEW_PICTURE"]["SRC"]):?> style="background-image: url(<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>)" <?endif;?>>
 		<?if($arItem["PREVIEW_PICTURE"]["SRC"]):?> <div class="overlay"> </div><?endif;?>
 	</div>
 	<div class="container">

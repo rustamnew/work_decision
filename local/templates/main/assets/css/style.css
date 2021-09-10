@@ -3940,6 +3940,43 @@ section.provide .img-box .statistic-item-icon img{
     height: 40px;
 }
 
+.careers .col-md-6.col-lg-4 {
+    margin-bottom: 30px;
+}
+.careers .item-careers {
+    height: 100%
+}
+
+.careers .item-careers ul {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.careers .item-careers ul li{
+    white-space: nowrap;
+}
+
+.career-detail-title {
+    text-align: center;
+}
+.career-detail-tags {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.career-detail-tags li{
+    display: inline-block;
+    font-weight: 500;
+    margin-right: 10px;
+}
+.career-detail-tags li.active{
+    background-color: #C89D66;
+    padding: 2px 15px;
+    color: #FFF;
+    border-radius: 3px;
+}
+
+
 
 /*Transitions*/
 

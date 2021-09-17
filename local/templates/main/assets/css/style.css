@@ -3976,6 +3976,24 @@ section.provide .img-box .statistic-item-icon img{
     border-radius: 3px;
 }
 
+.shop-item .item-img .box-more a {
+    white-space: nowrap;
+}
+
+
+.product-detail-text-additional {
+    display: none;
+}
+.product-detail-text-specs {
+    display: none;
+}
+
+.product-detail-text-additional.active {
+    display: block;
+}
+.product-detail-text-specs.active {
+    display: block;
+}
 
 
 /*Transitions*/

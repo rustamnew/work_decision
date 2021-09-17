@@ -433,3 +433,27 @@ $(function() {
 	var accordion = new Accordion($('#accordion'), false);
 });
 
+
+//product detail info 
+
+let productInfo = document.querySelector('.product-detail-text-additional')
+let productSpecs = document.querySelector('.product-detail-text-specs')
+
+let buttonInfo = document.querySelector('.product-detail-text-additional-button')
+let buttonSpecs = document.querySelector('.product-detail-text-specs-button')
+
+buttonSpecs.addEventListener('click', (e) => {
+    e.preventDefault()
+    productInfo.classList.remove('active')
+    productSpecs.classList.add('active')
+})
+
+buttonInfo.addEventListener('click', (e) => {
+    e.preventDefault()
+    productSpecs.classList.remove('active')
+    productInfo.classList.add('active')
+})
+
+
+
+

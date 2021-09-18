@@ -63,7 +63,13 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 					<div class="sec-title">
 						<h2><?=$arItem["NAME"];?></h2>
 						<h3><?=$arItem["PROPERTIES"]["title"]["VALUE"];?></h3>
-						<p><?=$arItem["PROPERTIES"]["subtitle"]["VALUE"]["TEXT"];?></p>
+						<p>
+							<?if ($arParams["DISPLAY_ALTERNATIVE"] == 'Y'):?>
+								<?=$arItem["DETAIL_TEXT"]?>
+							<?else:?>
+								<?=$arItem["PREVIEW_TEXT"]?>
+							<?endif;?>
+						</p>
 					</div>
 
 					<div class="row">
@@ -79,3 +85,4 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 		</div>
 	</div>
 </section>
+

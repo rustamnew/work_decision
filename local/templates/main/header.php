@@ -47,7 +47,7 @@ $isMainPage = $APPLICATION->GetCurPage(false) === '/';
         <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH. '/assets/css/responsive.css');?>
 
         <!--Fancybox-->
-        <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH. 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css');?>
+        <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH. '/assets/css/fancybox.css');?>
 
 
         <!--[if lt IE 9]>

@@ -455,5 +455,17 @@ buttonInfo.addEventListener('click', (e) => {
 })
 
 
+//fancybox
+
+$(".case-study-item").fancybox({
+    helpers : {
+      title: {
+        type: 'inside',          
+        position: 'bottom'
+      }
+    },
+  });
+
+
 
 

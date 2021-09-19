@@ -4067,3 +4067,185 @@ section.provide .img-box .statistic-item-icon img{
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
+
+
+
+
+/*custom contacts*/
+
+.wrap-get-in-touch {
+    position: relative;
+}
+
+.flat-get-in-touch .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.flat-get-in-touch input{
+    position: relative;
+    display: block;
+    width: 100%;
+    line-height: 24px;
+    padding: 15px 30px 17px;
+    color: #7d7bad;
+    border: 2px solid #e5e5e5;
+    height: 60px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    font-size: 100%;
+    
+    margin: 0;
+    max-width: 100%;
+    vertical-align: baseline;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+.flat-get-in-touch .get-in-touch {
+    width: 55%;
+    float: left;
+    display: inline-block;
+    padding: 75px 80px 70px;
+    background-image: url(../image/contact/contact2.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px #eee;
+
+    top: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.flat-get-in-touch .get-in-touch h2 {
+    font-family: 'Monsterrat', sans-serif;
+    font-size: 40px;
+    line-height: 57px;
+    font-weight: 600;
+    color: #0f0e26;
+    letter-spacing: -1.3px;
+    margin-bottom: 30px;
+}
+
+.flat-get-in-touch .get-in-touch input, 
+.flat-get-in-touch .get-in-touch textarea {
+    background-color: #f9f7ff;
+    border: none;
+    color: #7d7bad;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.flat-get-in-touch .get-in-touch textarea {
+    width: 100%;
+    padding: 15px 30px;
+    height: 150px;
+}
+
+.flat-get-in-touch .get-in-touch input.name {
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+.flat-get-in-touch .get-in-touch textarea.message {
+    margin-top: 23px;
+    height: 115px;
+}
+
+.flat-get-in-touch .wrap-submit {
+    margin-top: 20px;
+}
+
+.flat-button-arrow {
+    line-height: 60px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    background-color: #C89D66;
+    display: inline-block;
+    color: #fff;
+    padding-left: 40px;
+    padding-right: 40px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid transparent;
+}
+
+.flat-button-arrow:hover {
+    color: #C89D66;
+    background-color: #fff;
+    border-color: #C89D66;
+}
+
+.flat-get-in-touch .contact-info {
+    width: 45%;
+    display: inline-block;
+    background-color: #C89D66;
+    padding: 74px 79px 58px;
+    background-image: url(../image/contact/contact1.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+
+        
+    left: 55%;
+    position: relative;
+}
+
+.flat-get-in-touch .contact-info h3 {
+    font-family: 'Monsterrat', sans-serif;
+    font-size: 40px;
+    line-height: 56px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: -1.3px;
+    margin-bottom: 30px;
+}
+
+.flat-get-in-touch .contact-info ul li {
+    margin-bottom: 15px;
+    margin-top: 34px;
+}
+
+.flat-get-in-touch .contact-info ul li:first-child {
+    margin-top: 43px;
+}
+
+.flat-get-in-touch .contact-info .wrap-icon {
+    float: left;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.flat-get-in-touch .contact-info .wrap-icon svg{
+    height: 45px;
+    fill: #FFF;
+}
+.flat-get-in-touch .contact-info .wrap-icon img{
+    height: 45px;
+}
+
+.flat-get-in-touch .contact-info .wrap-info {
+    overflow: hidden;
+}
+
+.flat-get-in-touch .contact-info .wrap-info h2 {
+    font-family: 'Monsterrat', sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: -.7px;
+    margin-bottom: 12px;
+}
+
+.flat-get-in-touch .contact-info .wrap-info p {
+    font-family: 'Monsterrat', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 0;
+}

@@ -3995,7 +3995,18 @@ section.provide .img-box .statistic-item-icon img{
     display: block;
 }
 
+.discounts-image img {
+    margin-top: 20px;
+    width: 100%;
+}
 
+.discounts__button {
+    color: #FFF !important; 
+    width: 100%;
+}
+.discounts__button:hover {
+    color: #C89D66 !important;
+}
 /*Transitions*/
 
 .practice-area-item {

@@ -2553,7 +2553,7 @@ header.navs.active{
 /* :: Breadcrumb Header */
 .breadcrumb-header{
     padding-bottom: 120px;
-    padding-top: calc(130px + 120px);
+    padding-top: calc(80px + 120px);
     color: #FFF;
     position: relative;
     background-position: center;
@@ -4293,6 +4293,8 @@ section.provide .img-box .statistic-item-icon img{
     .flat-get-in-touch .contact-info {
         width: 50%;
         padding: 20px 20px;
+
+        left: 50%;
     }
     
 }
@@ -4313,7 +4315,9 @@ section.provide .img-box .statistic-item-icon img{
         margin-top: 40px;
         margin-bottom: 40px;
         position: unset;
+        
     }
+    
 }
 
 @media only screen and (max-width: 479px) {

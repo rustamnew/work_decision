@@ -38,5 +38,12 @@ $this->setFrameMode(true);
 				</div>
 			<?endforeach;?>	
 		</div>
+
+		<?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
+			<div class="col-md-12">
+				<?=$arResult["NAV_STRING"]?>
+			</div>
+		<?endif;?>
 	</div>
 </div>
+

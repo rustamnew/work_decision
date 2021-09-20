@@ -3692,6 +3692,9 @@ div.bx-component-opener {
 .services-section-item a {
     color: #262B3E;
 }
+.active-dark-mode-decision .services-section-item a {
+    color: #fff;
+}
 
 .services-pagination a{
     color: #262B3E;
@@ -3742,6 +3745,9 @@ div.bx-component-opener {
     bottom: 0;
     right: 0;
     left: 0;
+}
+.active-dark-mode-decision .pagination-area li a {
+    color: #FFF;
 }
 .pagination-area li:hover a{
     color: #FFF;
@@ -3975,6 +3981,9 @@ section.provide .img-box .statistic-item-icon img{
     color: #FFF;
     border-radius: 3px;
 }
+.active-dark-mode-decision .career-detail-tags li {
+    color: #FFF;
+}
 
 .shop-item .item-img .box-more a {
     white-space: nowrap;
@@ -4006,6 +4015,11 @@ section.provide .img-box .statistic-item-icon img{
 }
 .discounts__button:hover {
     color: #C89D66 !important;
+
+}
+
+.active-dark-mode-decision .introduction-advisors {
+    color: #FFF;
 }
 /*Transitions*/
 
@@ -4260,3 +4274,51 @@ section.provide .img-box .statistic-item-icon img{
     color: #fff;
     letter-spacing: 0;
 }
+
+
+@media only screen and (max-width: 991px) {
+    .flat-get-in-touch .get-in-touch {
+        width: 50%;
+        padding: 20px 20px;
+        box-shadow: none;
+    }
+
+    .flat-get-in-touch .get-in-touch h2,
+    .flat-get-in-touch .contact-info h3 {
+        font-size: 36px;
+    }
+
+    
+
+    .flat-get-in-touch .contact-info {
+        width: 50%;
+        padding: 20px 20px;
+    }
+    
+}
+
+@media only screen and (max-width: 767px) {
+    
+    .flat-get-in-touch .get-in-touch {
+        width: 100%;
+        padding: 20px;
+        box-shadow: 0 0 10px 0 #eee;
+
+        position: unset;
+    }
+    
+    .flat-get-in-touch .contact-info {
+        width: 100%;
+        padding: 20px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        position: unset;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .flat-get-in-touch .contact-info .wrap-info p {
+        font-size: 16px;
+    }
+}
+

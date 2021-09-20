@@ -88,34 +88,35 @@ $this->setFrameMode(true);
 				);?>
 					
 				<?$APPLICATION->IncludeComponent(
-					"bitrix:search.tags.cloud", 
-					"tags-blog", 
+					"bitrix:catalog.section.list", 
+					"sidebar-section-list", 
 					array(
-						"COMPONENT_TEMPLATE" => "tags-blog",
-						"SORT" => "CNT",
-						"PAGE_ELEMENTS" => "15",
-						"PERIOD" => "",
-						"URL_SEARCH" => "/search/index.php",
-						"TAGS_INHERIT" => "Y",
-						"CHECK_DATES" => "Y",
-						"FILTER_NAME" => "",
-						"arrFILTER" => array(
-							0 => "iblock_content",
-						),
-						"arrFILTER_iblock_content" => array(
-							0 => "all",
-						),
+						"ADD_SECTIONS_CHAIN" => "Y",
+						"CACHE_FILTER" => "N",
+						"CACHE_GROUPS" => "Y",
+						"CACHE_TIME" => "36000000",
 						"CACHE_TYPE" => "A",
-						"CACHE_TIME" => "3600",
-						"FONT_MAX" => "",
-						"FONT_MIN" => "",
-						"COLOR_NEW" => "",
-						"COLOR_OLD" => "",
-						"PERIOD_NEW_TAGS" => "",
-						"SHOW_CHAIN" => "N",
-						"COLOR_TYPE" => "N",
-						"WIDTH" => "",
-						"TITLE" => "Теги"
+						"COUNT_ELEMENTS" => "N",
+						"COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
+						"FILTER_NAME" => "sectionsFilter",
+						"IBLOCK_ID" => "11",
+						"IBLOCK_TYPE" => "content",
+						"SECTION_CODE" => "",
+						"SECTION_FIELDS" => array(
+							0 => "",
+							1 => "",
+						),
+						"SECTION_ID" => $_REQUEST["SECTION_ID"],
+						"SECTION_URL" => "",
+						"SECTION_USER_FIELDS" => array(
+							0 => "",
+							1 => "",
+						),
+						"SHOW_PARENT_NAME" => "N",
+						"TOP_DEPTH" => "1",
+						"VIEW_MODE" => "LINE",
+						"COMPONENT_TEMPLATE" => "sidebar-section-list",
+						"TITLE" => "Разделы"
 					),
 					false
 				);?>

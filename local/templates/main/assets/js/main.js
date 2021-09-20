@@ -456,7 +456,7 @@ buttonInfo.addEventListener('click', (e) => {
 
 
 //fancybox
-
+/*
 $(".case-study-item").fancybox({
     helpers : {
       title: {
@@ -465,7 +465,7 @@ $(".case-study-item").fancybox({
       }
     },
   });
-
+*/
 
 
 

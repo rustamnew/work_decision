@@ -4021,6 +4021,11 @@ section.provide .img-box .statistic-item-icon img{
 .active-dark-mode-decision .introduction-advisors {
     color: #FFF;
 }
+
+
+.search-box form button {
+    margin-right: 10%;
+}
 /*Transitions*/
 
 .practice-area-item {
@@ -4326,3 +4331,78 @@ section.provide .img-box .statistic-item-icon img{
     }
 }
 
+
+
+/*custom summonedform*/
+
+.summonedFormWrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: -100%;
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.summonedFormWrap.active {
+    left: 0;
+    display: flex;
+}
+
+.summonedFormWrap p {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 22px;
+    text-align: center;
+}
+
+.summonedForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 70%;
+    height: 50%;
+    max-width: 510px;
+    min-height: 400px;
+    max-height: 450px;
+}
+
+
+
+.summonedForm p {
+    margin-bottom: 30px;
+}
+
+
+
+.summonedForm input {
+    margin-bottom: 30px;
+    width: 80%;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #F2F2F2;
+    box-sizing: content-box;
+    border: 2px solid transparent;
+}
+
+.summonedForm .summonedFormInputSubmit {
+    margin-bottom: 0;
+    background-color: #FCB32A;
+    cursor: pointer;
+}
+
+#summonedFormClose {
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    color: #ffffff;
+    font-size: 36px;
+}

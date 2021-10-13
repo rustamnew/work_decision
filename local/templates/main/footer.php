@@ -240,7 +240,8 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
         <!-- :: Lity -->
         <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/lity.min.js')?>"></script>
 
-          <!-- Fancybox-->
+        <!-- Fancybox-->
+        <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/jquery.fancybox-1.3.4.pack.js')?>"></script>
         <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/fancybox.umd.js')?>"></script>
         
         <!-- :: Main JS -->

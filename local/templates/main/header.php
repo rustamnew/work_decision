@@ -47,6 +47,7 @@ $isMainPage = $APPLICATION->GetCurPage(false) === '/';
         <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH. '/assets/css/responsive.css');?>
 
         <!--Fancybox-->
+        <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH. "/assets/css/jquery.fancybox-1.3.4.css");?>
         <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH. '/assets/css/fancybox.css');?>
 
 
@@ -103,9 +104,10 @@ $isMainPage = $APPLICATION->GetCurPage(false) === '/';
                                 <li><a class="icon open-search-box" href="#"><i class="fas fa-search"></i></a></li>
                                 <li><a class="icon open-menu" href="#"><i class="fas fa-th"></i></a></li>
                                 <li>
-                                    <?$APPLICATION->IncludeFile(SITE_DIR."include/header_button.php", 
-                                        array(), 
-                                        array("MODE" => "html"));?>
+                                    <a class="summonFormButton btn-1 btn-2" id='test1' href="/">
+                                        <?$APPLICATION->IncludeFile(SITE_DIR."include/header_button.php", 
+                                        array(), array("MODE" => "html"));?>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -191,14 +193,7 @@ $isMainPage = $APPLICATION->GetCurPage(false) === '/';
                 </nav>
             </header>
 
-            <!-- :: Search Box -->
-            <div class="search-box">
-                <form>
-                    <input type="search" placeholder="Search Here..">
-                    <button type="submit"><i class="fas fa-search"></i></button>
-                </form>
-                <i class="fas fa-times close-search"></i>
-            </div>
+            
 
             <!-- :: Menu Box -->
             <div class="menu-box">
@@ -461,5 +456,13 @@ $isMainPage = $APPLICATION->GetCurPage(false) === '/';
                     </div>
                 </section>
             <?endif;?>
+
+            <!-- :: Search Box -->
+            <?$APPLICATION->IncludeComponent("bitrix:search.form", "header_search", Array(
+                "PAGE" => "#SITE_DIR#search/index.php",
+                    "USE_SUGGEST" => "N",
+                ),
+                false
+            );?>
 
             

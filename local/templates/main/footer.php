@@ -216,6 +216,23 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 
         </div>
 
+        <!--popup form-->
+        <?$APPLICATION->IncludeComponent(
+            "bitrix:main.feedback", 
+            "feedback-form-popup", 
+            array(
+                "USE_CAPTCHA" => "Y",
+                "OK_TEXT" => "Спасибо, ваше сообщение принято.",
+                "EMAIL_TO" => "1rustamnew1@gmail.com",	
+                "REQUIRED_FIELDS" => array(	
+                    0 => "NAME",
+                ),
+                "EVENT_MESSAGE_ID" => "",
+            ),
+            false
+        );?>
+        
+
         <!-- :: jQuery JS -->
         <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/jquery-3.5.1.min.js')?>"></script>
 

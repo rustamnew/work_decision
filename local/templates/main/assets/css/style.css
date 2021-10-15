@@ -4280,6 +4280,11 @@ section.provide .img-box .statistic-item-icon img{
     letter-spacing: 0;
 }
 
+.flat-get-in-touch .get-in-touch input[type=submit] {
+    background-color: #C89D66;
+    color: #fff;
+}
+
 
 @media only screen and (max-width: 991px) {
     .flat-get-in-touch .get-in-touch {

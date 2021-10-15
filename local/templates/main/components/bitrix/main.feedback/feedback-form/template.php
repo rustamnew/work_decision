@@ -22,7 +22,7 @@ if($arResult["OK_MESSAGE"] <> '')
 }
 ?>
 
-<form action="<?=POST_FORM_ACTION_URI?>" id="testid" method="POST" onsubmit="test()">
+<form action="<?=POST_FORM_ACTION_URI?>" method="POST">
 	<?=bitrix_sessid_post()?>
 	<div class="row">
 		<div class="col-md-6">

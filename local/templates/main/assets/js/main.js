@@ -442,30 +442,39 @@ let productSpecs = document.querySelector('.product-detail-text-specs')
 let buttonInfo = document.querySelector('.product-detail-text-additional-button')
 let buttonSpecs = document.querySelector('.product-detail-text-specs-button')
 
-buttonSpecs.addEventListener('click', (e) => {
-    e.preventDefault()
-    productInfo.classList.remove('active')
-    productSpecs.classList.add('active')
+if (buttonSpecs) {
+    buttonSpecs.addEventListener('click', (e) => {
+        e.preventDefault()
+        productInfo.classList.remove('active')
+        productSpecs.classList.add('active')
+    })
+}
+if (buttonInfo) {
+    buttonInfo.addEventListener('click', (e) => {
+        e.preventDefault()
+        productSpecs.classList.remove('active')
+        productInfo.classList.add('active')
+    })
+}
+
+//открытие формы
+let summonButtons = document.querySelectorAll('.summonFormButton')
+let formWrap = document.querySelector('#summonedFormWrap')
+summonButtons.forEach((item) => {
+    console.log(item)
+    item.addEventListener('click', (e) => {
+        e.preventDefault()
+        formWrap.classList.add('active')
+    })
 })
 
-buttonInfo.addEventListener('click', (e) => {
+
+
+//Закрытие формы
+let closeFancybox = (e) => {
     e.preventDefault()
-    productSpecs.classList.remove('active')
-    productInfo.classList.add('active')
-})
-
-
-//fancybox
-/*
-$(".case-study-item").fancybox({
-    helpers : {
-      title: {
-        type: 'inside',          
-        position: 'bottom'
-      }
-    },
-  });
-*/
+    formWrap.classList.remove('active')
+}
 
 
 

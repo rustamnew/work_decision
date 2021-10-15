@@ -25,10 +25,10 @@ if($arResult["OK_MESSAGE"] <> '')
 <form action="<?=POST_FORM_ACTION_URI?>" method="POST">
 <?=bitrix_sessid_post()?>
 		<div class="subscribe-item">
-			<input type="text" name="user_name" placeholder="Ваше имя">
+			<input type="text" name="user_name" placeholder="Ваше Имя" required>
 		</div>
 		<div class="subscribe-item">
-			<input type="email" name="user_email" placeholder="Ваш Email">
+			<input type="email" name="user_email" placeholder="Ваш Email" required>
 		</div>
 
 		<div class="subscribe-item">

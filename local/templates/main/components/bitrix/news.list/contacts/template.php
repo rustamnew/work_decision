@@ -22,19 +22,20 @@ $this->setFrameMode(true);
             <div class="get-in-touch">
                 <h2><?=$arItem["PROPERTIES"]["title1"]["VALUE"];?></h2>
 
-                <form action="#" method="post" accept-charset="utf-8" class="form-submit contact-form">
-                    <input type="text" tabindex="1" id="name" name="name" value="" class=" name" placeholder="Ваше имя" required="">
-                
-                    <input type="email" tabindex="3" id="email" name="email" value="" class=" email" placeholder="Ваш Email" required="">
-                
-                    <textarea name="message" tabindex="5" cols="40" rows="10" class="message" placeholder="Сообщение" required=""></textarea>
-                    
-                    <div class="wrap-submit submit-form">
-                        <div class="wrap-btn">
-                            <a href="#" class="flat-button-arrow"><?=$arItem["PROPERTIES"]["text"]["VALUE"];?></a>
-                        </div>
-                    </div>
-                </form>
+                <?$APPLICATION->IncludeComponent("bitrix:main.feedback", "feedback-form-contacts", Array(
+						"COMPONENT_TEMPLATE" => ".default",
+							"USE_CAPTCHA" => "Y",
+							"OK_TEXT" => "Спасибо, ваше сообщение принято.",
+							"EMAIL_TO" => "1rustamnew1@gmail.com",	
+							"REQUIRED_FIELDS" => array(	
+								0 => "NAME",
+								1 => "EMAIL",
+							),
+							"EVENT_MESSAGE_ID" => "",
+							"SUBMIT_TEXT" => $arItem["PROPERTIES"]["text"]["VALUE"],
+						),
+						false
+                );?>
             </div>
             <div class="contact-info">
                 <h3><?=$arItem["PROPERTIES"]["title2"]["VALUE"];?></h3>

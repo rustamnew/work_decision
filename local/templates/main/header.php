@@ -104,7 +104,7 @@ $isMainPage = $APPLICATION->GetCurPage(false) === '/';
                                 <li><a class="icon open-search-box" href="#"><i class="fas fa-search"></i></a></li>
                                 <li><a class="icon open-menu" href="#"><i class="fas fa-th"></i></a></li>
                                 <li>
-                                    <a class="summonFormButton btn-1 btn-2" id='test1' href="/">
+                                    <a class="summonFormButton btn-1 btn-2" href="/">
                                         <?$APPLICATION->IncludeFile(SITE_DIR."include/header_button.php", 
                                         array(), array("MODE" => "html"));?>
                                     </a>

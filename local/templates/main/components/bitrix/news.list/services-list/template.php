@@ -15,9 +15,15 @@ $this->setFrameMode(true);
 
 <?$iblock_id = $arParams["IBLOCK_ID"];?>
 
+<?
+$this->AddEditAction($arResult["ITEMS"][0]['ID'], $arResult["ITEMS"][0]['EDIT_LINK'], CIBlock::GetArrayByID($arResult["ITEMS"][0]["IBLOCK_ID"], "ELEMENT_EDIT"));
+$this->AddDeleteAction($arResult["ITEMS"][0]['ID'], $arResult["ITEMS"][0]['DELETE_LINK'], CIBlock::GetArrayByID($arResult["ITEMS"][0]["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
+?>
 
-<section class="practice-area py-100-70" style="background-image: url(<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>)" >
-	<div class="container" >
+
+
+<section class="practice-area py-100-70" >
+	<div class="container" id="<?=$this->GetEditAreaId($arResult["ITEMS"][0]['ID']);?>">
 		<div class="row" >
 			<div class="col-md-8 offset-md-2">
 				<div class="sec-title text-center">
@@ -74,7 +80,7 @@ $this->setFrameMode(true);
 									
 								<?}?>
 							</ul>
-							<a href="<?=$section_link;?>">Читать далее</a>
+							<a href="<?=$section_link;?>"><?echo GetMessage("READ_MORE")?></a>
 						</div>
 					</div>
 				</div>

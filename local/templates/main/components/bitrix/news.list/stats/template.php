@@ -28,24 +28,26 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 					<div class="about-img">
 						<img class="img-fluid" src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="03 About">
 					</div>
-					<div class="logo-box">
-						<?$path = CFile::GetPath($arItem['PROPERTIES']['icon']['VALUE']);?>
+					<?if($arItem["PROPERTIES"]["icon_show"]["VALUE"] == 'Y'):?>
+						<div class="logo-box">
+							<?$path = CFile::GetPath($arItem['PROPERTIES']['icon']['VALUE']);?>
 
-						<?if (stristr($path, '.svg')):?>
-							<?
-							$img_file = CFile::GetPath($arItem['PROPERTIES']['icon']['VALUE']);
+							<?if (stristr($path, '.svg')):?>
+								<?
+								$img_file = CFile::GetPath($arItem['PROPERTIES']['icon']['VALUE']);
 
-							$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
-							if($svg['id']){
-								$img_grup = $img_file.'#'.$svg['id'];
-							}
+								$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
+								if($svg['id']){
+									$img_grup = $img_file.'#'.$svg['id'];
+								}
 
-							$svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
-							print_r($svg_file);?>
-						<?else:?>
-							<img src=<?=$path?>>
-						<?endif;?>
-					</div>
+								$svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
+								print_r($svg_file);?>
+							<?else:?>
+								<img src=<?=$path?>>
+							<?endif;?>
+						</div>
+					<?endif;?>
 				</div>
 			</div>
 			<div class="col-md-6 col-lg-4">

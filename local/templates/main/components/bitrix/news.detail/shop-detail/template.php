@@ -49,8 +49,8 @@ $this->setFrameMode(true);
 			<div class="col-lg-8 offset-lg-2">
 				<div class="description text-center">
 					<ul>
-						<li><a href="#" class="btn-1 product-detail-text-additional-button">Дополнительная информация</a></li>
-						<li><a href="#" class="btn-1 product-detail-text-specs-button">Характеристики</a></li>
+						<li><a href="#" class="btn-1 product-detail-text-additional-button"><?echo GetMessage("ADDITIONAL_INFO")?></a></li>
+						<li><a href="#" class="btn-1 product-detail-text-specs-button"><?echo GetMessage("SPECIFICATIONS")?></a></li>
 					</ul>
 					<p class="product-detail-text-additional active"><?=$arResult["DETAIL_TEXT"]?></p>
 					<p class="product-detail-text-specs"><?=nl2br($arResult["PROPERTIES"]["specs"]["VALUE"]["TEXT"]);?></p>

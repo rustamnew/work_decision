@@ -25,11 +25,11 @@ if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();
 		?><div class="mf-ok-text"><?=$arResult["OK_MESSAGE"]?></div><?
 	}?>
 
-	<input type="text" name="user_name" value="" class=" name" placeholder="Ваше имя" required>
+	<input type="text" name="user_name" value="" class=" name" placeholder="<?echo GetMessage("YOUR_NAME")?>" required>
 
-	<input type="email" name="user_email" value="" class=" email" placeholder="Ваш Email" required>
+	<input type="email" name="user_email" value="" class=" email" placeholder="<?echo GetMessage("YOUR_EMAIL")?>" required>
 
-	<textarea name="message" name="MESSAGE" cols="40" rows="10" class="message" placeholder="Сообщение" required></textarea>
+	<textarea name="message" name="MESSAGE" cols="40" rows="10" class="message" placeholder="<?echo GetMessage("YOUR_MESSAGE")?>" required></textarea>
 	
 	<?if($arParams["USE_CAPTCHA"] == "Y"):?>
 		<div class="mf-captcha">

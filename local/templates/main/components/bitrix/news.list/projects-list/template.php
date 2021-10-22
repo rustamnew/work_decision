@@ -42,7 +42,7 @@ $this->setFrameMode(true);
 						<h5><?=$arItem["NAME"]?></h5>
 					</a>
 					<p><?=$arItem["PREVIEW_TEXT"]?></p>
-					<a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="link">Читать далее</a>
+					<a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="link"><?echo GetMessage("READ_MORE")?></a>
 				</div>
 			</div>
 		</div>

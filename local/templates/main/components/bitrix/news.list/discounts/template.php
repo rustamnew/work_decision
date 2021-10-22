@@ -33,7 +33,7 @@ $this->setFrameMode(true);
 							<img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="image">
 						</div>
 						<p><?=$arItem["PREVIEW_TEXT"]?></p>
-						<a href="#" class="btn-1 discounts__button">Заказать звонок</a>
+						<a href="#" class="btn-1 discounts__button"><?echo GetMessage("REQUEST_CALL")?></a>
 					</div>
 				</div>
 			<?endforeach;?>	

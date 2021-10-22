@@ -16,7 +16,7 @@ if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();
 	<form action="<?=POST_FORM_ACTION_URI?>" method="POST" class="summonedForm">
 	<?=bitrix_sessid_post()?>
 		<a href="#" class="summonedFormClose" id="summonedFormClose" onClick="closeFancybox(event)">X</a>
-		<p>Оставьте заявку и мы перезвоним Вам в ближайшее время!</p>
+		<p><?echo GetMessage("FORM_SUBTITLE")?></p>
 		<?
 			if(!empty($arResult["ERROR_MESSAGE"])) {
 				foreach($arResult["ERROR_MESSAGE"] as $v)
@@ -29,10 +29,10 @@ if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();
 			
 		?>
 		
-		<input class="summonedFormInputName" type="text" name="user_name" placeholder="Ваше Имя" required>
-		<input class="summonedFormInputEmail" type="email" name="user_email" placeholder="Ваш Email" required>
+		<input class="summonedFormInputName" type="text" name="user_name" placeholder="<?echo GetMessage("YOUR_NAME")?>" required>
+		<input class="summonedFormInputEmail" type="email" name="user_email" placeholder="<?echo GetMessage("YOUR_EMAIL")?>" required>
 		<input type="hidden" name="PARAMS_HASH" value="<?=$arResult["PARAMS_HASH"]?>">
-		<input type="submit" name="submit" value="Отправить" class="summonedFormInputSubmit">
+		<input type="submit" name="submit" value="<?=GetMessage("MFT_SUBMIT")?>" class="summonedFormInputSubmit">
 
 		<?if($arParams["USE_CAPTCHA"] == "Y"):?>
 			<div class="mf-captcha">

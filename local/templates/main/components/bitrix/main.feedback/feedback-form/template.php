@@ -27,12 +27,12 @@ if($arResult["OK_MESSAGE"] <> '')
 	<div class="row">
 		<div class="col-md-6">
 			<div class="quote-item">
-				<input type="text" name="user_name" placeholder="Имя">
+				<input type="text" name="user_name" placeholder="<?echo GetMessage("YOUR_NAME")?>">
 			</div>
 		</div>
 		<div class="col-md-6">
 			<div class="quote-item">
-				<input type="tel" name="user_phone" placeholder="Номер телефона">
+				<input type="tel" name="user_phone" placeholder="<?echo GetMessage("YOUR_PHONE")?>">
 			</div>
 		</div>
 
@@ -54,7 +54,7 @@ if($arResult["OK_MESSAGE"] <> '')
 		<div class="col-md-12">
 			<div class="quote-item">
 				<div class="quote-item">
-					<textarea name="MESSAGE" placeholder="Сообщение"><?=$arResult["MESSAGE"]?></textarea>
+					<textarea name="MESSAGE" placeholder="<?echo GetMessage("YOUR_MESSAGE")?>"><?=$arResult["MESSAGE"]?></textarea>
 				</div>
 			</div>
 		</div>

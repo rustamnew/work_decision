@@ -27,7 +27,7 @@ $this->setFrameMode(true);
 				<li><?=$arItem["PROPERTIES"]["city"]["VALUE"];?></li>
 			</ul>
 			<p><?=$arItem["PREVIEW_TEXT"]?></p>
-			<a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="link">Подробнее</a>
+			<a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="link"><?echo GetMessage("READ_MORE")?></a>
 		</div>
 	</div>
 <?endforeach;?>	

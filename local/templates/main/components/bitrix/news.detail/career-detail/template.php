@@ -15,8 +15,8 @@ $this->setFrameMode(true);
 <div class="single-practice-areas-box">
 	<h3 class="career-detail-title"><?=$arResult["NAME"]?></h3>
 	<ul class="career-detail-tags">
-		<li class="active">Полная занятость</li>
-		<li>Казань</li>
+		<li class="active"><?=$arResult["PROPERTIES"]["employment"]["VALUE"];?></li>
+		<li><?=$arResult["PROPERTIES"]["city"]["VALUE"];?></li>
 	</ul>
 	<p><?=$arResult["DETAIL_TEXT"]?></p>
 	

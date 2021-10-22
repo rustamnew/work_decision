@@ -3,17 +3,17 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 
 $arTemplateParameters = array(
 	"NAME" => Array(
-		"NAME" => 'Название',
+		"NAME" => GetMessage("NAME"),
 		"TYPE" => "STRING",
 		"DEFAULT" => "",
 	),
 	"TITLE" => Array(
-		"NAME" => 'Заголовок',
+		"NAME" => GetMessage("TITLE"),
 		"TYPE" => "STRING",
 		"DEFAULT" => "",
 	),
 	"SUBTITLE" => Array(
-		"NAME" => 'Подзаголовок',
+		"NAME" => GetMessage("SUBTITLE"),
 		"TYPE" => "STRING",
 		"DEFAULT" => "",
 	),

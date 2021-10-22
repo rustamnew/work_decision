@@ -113,7 +113,7 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 				<div class="img-box" style="background-image: url(<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>)">
 					<div class="img-provide"></div>
 
-					<?if($arItem["PROPERTIES"]["counter_show"]["VALUE"] == $prop):?>
+					<?if($arItem["PROPERTIES"]["counter_show"]["VALUE"] == 'Y'):?>
 						<div class="statistic-owl owl-carousel owl-theme">
 							<div class="statistic-item">
 								<div class="statistic-item-icon">

@@ -154,7 +154,7 @@ $this->setFrameMode(true);
                 </div>
 			<?endif;?>
 			<?if($arItem["PROPERTIES"]["center"]["VALUE"] == "Да"):?>
-				<div class="sec-hero display-table" style="background-image: url(<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>)" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
+				<div class="sec-hero display-table" style="background-image: url(<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>)">
 					<div class="table-cell">
 						<div class="overlay"></div>
 						<div class="container">

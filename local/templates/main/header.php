@@ -104,7 +104,7 @@ $isMainPage = $APPLICATION->GetCurPage(false) === '/';
                                 <li><a class="icon open-search-box" href="#"><i class="fas fa-search"></i></a></li>
                                 <li><a class="icon open-menu" href="#"><i class="fas fa-th"></i></a></li>
                                 <li>
-                                    <a class="summonFormButton btn-1 btn-2" href="/">
+                                    <a class="summonFormButton btn-1 btn-2" href="<?=SITE_DIR?>">
                                         <?$APPLICATION->IncludeFile(SITE_DIR."include/header_button.php", 
                                         array(), array("MODE" => "html"));?>
                                     </a>
@@ -119,7 +119,7 @@ $isMainPage = $APPLICATION->GetCurPage(false) === '/';
                     <div class="container">
                         <div class="box-content d-flex align-items-center justify-content-between">
                             <div class="logo">
-                                <a <?if(!$isMainPage):?> href="/" <?endif;?> class="logo-nav">
+                                <a <?if(!$isMainPage):?> href="<?=SITE_DIR?>" <?endif;?> class="logo-nav">
                                     <?$APPLICATION->IncludeComponent(
                                         "bitrix:main.include",
                                         "",
@@ -173,7 +173,7 @@ $isMainPage = $APPLICATION->GetCurPage(false) === '/';
                             );?>
 
                             
-                            <div class="info-nav">
+                            <a href="tel:" class="info-nav">
                                 <i class="flaticon-call"></i>
                                 <div class="contact-nav">
                                     
@@ -187,7 +187,7 @@ $isMainPage = $APPLICATION->GetCurPage(false) === '/';
                                         array("MODE" => "html"));?>
                                     
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </nav>
@@ -199,7 +199,7 @@ $isMainPage = $APPLICATION->GetCurPage(false) === '/';
             <div class="menu-box">
                 <div class="inner-menu">
                     <div class="website-info">
-                        <a href="/" class="logo">
+                        <a href="<?=SITE_DIR?>" class="logo">
                             <?$APPLICATION->IncludeComponent(
                                 "bitrix:main.include",
                                 "",
@@ -446,7 +446,7 @@ $isMainPage = $APPLICATION->GetCurPage(false) === '/';
                                 <div class="banner">
                                     <h1><?$APPLICATION->ShowTitle(false);?></h1>
                                     <ul>
-                                        <li><a href="/">Главная</a></li>
+                                        <li><a href="<?=SITE_DIR?>">Главная</a></li>
                                         <li><i class="fas fa-angle-right"></i></li>
                                         <li><?$APPLICATION->ShowTitle(false);?></li>
                                     </ul>

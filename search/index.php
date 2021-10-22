@@ -1,7 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("image", "/local/templates/main/image/blog/blog11.jpg");
-$APPLICATION->SetTitle("Поиск");
+$APPLICATION->SetTitle("Результаты поиска");
 ?><br>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:search.page", 

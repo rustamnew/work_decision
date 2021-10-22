@@ -21,10 +21,25 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 ?>
 
 <section class="history" >
-	<div class="bg-section" style="background-image: url(<?=$arItem["DETAIL_PICTURE"]["SRC"]?>)" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
+	<div class="bg-section" 
+	style="
+	<?if($arItem["PROPERTIES"]["show_form"]["VALUE"] == 'N' || $arItem["PROPERTIES"]["show_form"]["VALUE"] == false):?> 
+		height: 100%;
+	<?endif;?>
+
+	background-image: url(<?=$arItem["DETAIL_PICTURE"]["SRC"]?>);
+	"
+	id="<?=$this->GetEditAreaId($arItem['ID']);?>">
 		<div class="overlay"></div>
 	</div>
-	<div class="container">
+	<?if($arItem["PROPERTIES"]["show_timeline"]["VALUE"] == 'Y'):?>
+	<div class="container"
+		<?if($arItem["PROPERTIES"]["show_form"]["VALUE"] == 'N' || $arItem["PROPERTIES"]["show_form"]["VALUE"] == false):?> 
+		style="
+		padding-bottom: 170px;
+		"
+		<?endif;?>
+	>
 		<div class="row">
 			<div class="col-md-8 offset-md-2">
 				<div class="sec-title text-center">
@@ -36,7 +51,7 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 
 
 
-		<?if($arItem["PROPERTIES"]["show_timeline"]["VALUE"] == 'Y'):?>
+		
 			<?$APPLICATION->IncludeComponent(
 				"bitrix:news.list",
 				"timeline",
@@ -101,9 +116,10 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 		
 				)
 			);?>
-		<?endif;?>
 	</div>
+	<?endif;?>
 
+	<?if($arItem["PROPERTIES"]["show_form"]["VALUE"] == 'Y'):?>
 	<div class="quote">
 		<div class="container">
 			<div class="box">
@@ -169,5 +185,6 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 			</div>
 		</div>
 	</div>
+	<?endif;?>
 </section>
 

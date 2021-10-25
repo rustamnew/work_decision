@@ -1,8 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetPageProperty("image", "/local/templates/main/image/blog/blog11.jpg");
+$APPLICATION->SetPageProperty("image", "/local/templates/main/assets/images/header/07_header.jpg");
 $APPLICATION->SetTitle("Результаты поиска");
-?><br>
+?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:search.page", 
 	"search-page", 
@@ -21,7 +21,7 @@ $APPLICATION->SetTitle("Результаты поиска");
 		"FILTER_NAME" => "",
 		"NO_WORD_LOGIC" => "N",
 		"PAGER_SHOW_ALWAYS" => "Y",
-		"PAGER_TEMPLATE" => "",
+		"PAGER_TEMPLATE" => "blog-navigation",
 		"PAGER_TITLE" => "Результаты поиска",
 		"PAGE_RESULT_COUNT" => "10",
 		"RESTART" => "N",

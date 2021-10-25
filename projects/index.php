@@ -1,11 +1,10 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetPageProperty("image", "/local/templates/main/assets/images/header/07_header.jpg");
-$APPLICATION->SetTitle("Карьера");
-?>
-<?$APPLICATION->IncludeComponent(
+$APPLICATION->SetPageProperty("image", "/local/templates/main/assets/images/header/06_header.jpg");
+$APPLICATION->SetTitle("Проекты");
+?><?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
-	"career", 
+	"projects", 
 	array(
 		"ADD_ELEMENT_CHAIN" => "N",
 		"ADD_SECTIONS_CHAIN" => "N",
@@ -31,9 +30,8 @@ $APPLICATION->SetTitle("Карьера");
 		"DETAIL_PAGER_TEMPLATE" => "",
 		"DETAIL_PAGER_TITLE" => "Страница",
 		"DETAIL_PROPERTY_CODE" => array(
-			0 => "city",
-			1 => "employment",
-			2 => "",
+			0 => "",
+			1 => "",
 		),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "N",
@@ -43,23 +41,22 @@ $APPLICATION->SetTitle("Карьера");
 		"DISPLAY_PREVIEW_TEXT" => "N",
 		"DISPLAY_TOP_PAGER" => "N",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "23",
+		"IBLOCK_ID" => "11",
 		"IBLOCK_TYPE" => "content",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"LIST_FIELD_CODE" => array(
-			0 => "",
+			0 => "DATE_CREATE",
 			1 => "",
 		),
 		"LIST_PROPERTY_CODE" => array(
-			0 => "city",
-			1 => "employment",
-			2 => "",
+			0 => "",
+			1 => "",
 		),
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
-		"NEWS_COUNT" => "12",
+		"NEWS_COUNT" => "6",
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
@@ -68,15 +65,16 @@ $APPLICATION->SetTitle("Карьера");
 		"PAGER_TEMPLATE" => ".default",
 		"PAGER_TITLE" => "Новости",
 		"PREVIEW_TRUNCATE_LEN" => "",
+		"SEF_FOLDER" => "/projects/",
 		"SEF_MODE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
-		"SET_STATUS_404" => "N",
+		"SET_STATUS_404" => "Y",
 		"SET_TITLE" => "N",
-		"SHOW_404" => "N",
-		"SORT_BY1" => "SORT",
-		"SORT_BY2" => "ACTIVE_FROM",
+		"SHOW_404" => "Y",
+		"SORT_BY1" => "",
+		"SORT_BY2" => "",
 		"SORT_ORDER1" => "ASC",
-		"SORT_ORDER2" => "DESC",
+		"SORT_ORDER2" => "",
 		"STRICT_SECTION_CHECK" => "N",
 		"USE_CATEGORIES" => "N",
 		"USE_FILTER" => "N",
@@ -85,12 +83,12 @@ $APPLICATION->SetTitle("Карьера");
 		"USE_RSS" => "N",
 		"USE_SEARCH" => "N",
 		"USE_SHARE" => "N",
-		"COMPONENT_TEMPLATE" => "career",
-		"SEF_FOLDER" => "/career/",
+		"COMPONENT_TEMPLATE" => "projects",
+		"FILE_404" => "",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
-			"section" => "",
-			"detail" => "#ELEMENT_CODE#/",
+			"section" => "#SECTION_CODE#/",
+			"detail" => "#SECTION_CODE#/#ELEMENT_CODE#/",
 		)
 	),
 	false

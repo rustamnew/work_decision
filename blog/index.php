@@ -1,14 +1,13 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetPageProperty("image", "/local/templates/main/assets/images/header/07_header.jpg");
-$APPLICATION->SetTitle("Карьера");
-?>
-<?$APPLICATION->IncludeComponent(
+$APPLICATION->SetPageProperty("image", "/local/templates/main/assets/images/header/06_header.jpg");
+$APPLICATION->SetTitle("Блог");
+?><?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
-	"career", 
+	"blog", 
 	array(
 		"ADD_ELEMENT_CHAIN" => "N",
-		"ADD_SECTIONS_CHAIN" => "N",
+		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
 		"AJAX_OPTION_HISTORY" => "N",
@@ -24,58 +23,58 @@ $APPLICATION->SetTitle("Карьера");
 		"DETAIL_DISPLAY_BOTTOM_PAGER" => "N",
 		"DETAIL_DISPLAY_TOP_PAGER" => "N",
 		"DETAIL_FIELD_CODE" => array(
-			0 => "",
-			1 => "",
+			0 => "TAGS",
+			1 => "DATE_CREATE",
+			2 => "",
 		),
 		"DETAIL_PAGER_SHOW_ALL" => "N",
 		"DETAIL_PAGER_TEMPLATE" => "",
 		"DETAIL_PAGER_TITLE" => "Страница",
 		"DETAIL_PROPERTY_CODE" => array(
-			0 => "city",
-			1 => "employment",
-			2 => "",
+			0 => "",
+			1 => "",
 		),
 		"DETAIL_SET_CANONICAL_URL" => "N",
-		"DISPLAY_BOTTOM_PAGER" => "N",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"DISPLAY_DATE" => "N",
-		"DISPLAY_NAME" => "Y",
+		"DISPLAY_NAME" => "N",
 		"DISPLAY_PICTURE" => "N",
 		"DISPLAY_PREVIEW_TEXT" => "N",
 		"DISPLAY_TOP_PAGER" => "N",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "23",
+		"IBLOCK_ID" => "7",
 		"IBLOCK_TYPE" => "content",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"LIST_FIELD_CODE" => array(
-			0 => "",
-			1 => "",
+			0 => "TAGS",
+			1 => "DATE_CREATE",
+			2 => "",
 		),
 		"LIST_PROPERTY_CODE" => array(
-			0 => "city",
-			1 => "employment",
-			2 => "",
+			0 => "",
+			1 => "",
 		),
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
-		"NEWS_COUNT" => "12",
+		"NEWS_COUNT" => "3",
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
 		"PAGER_SHOW_ALL" => "N",
 		"PAGER_SHOW_ALWAYS" => "N",
-		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TEMPLATE" => "blog-navigation",
 		"PAGER_TITLE" => "Новости",
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"SEF_MODE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
-		"SET_STATUS_404" => "N",
+		"SET_STATUS_404" => "Y",
 		"SET_TITLE" => "N",
-		"SHOW_404" => "N",
-		"SORT_BY1" => "SORT",
+		"SHOW_404" => "Y",
+		"SORT_BY1" => "created_date",
 		"SORT_BY2" => "ACTIVE_FROM",
-		"SORT_ORDER1" => "ASC",
+		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "DESC",
 		"STRICT_SECTION_CHECK" => "N",
 		"USE_CATEGORIES" => "N",
@@ -85,8 +84,9 @@ $APPLICATION->SetTitle("Карьера");
 		"USE_RSS" => "N",
 		"USE_SEARCH" => "N",
 		"USE_SHARE" => "N",
-		"COMPONENT_TEMPLATE" => "career",
-		"SEF_FOLDER" => "/career/",
+		"COMPONENT_TEMPLATE" => "blog",
+		"SEF_FOLDER" => "/blog/",
+		"FILE_404" => "",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",
@@ -94,4 +94,4 @@ $APPLICATION->SetTitle("Карьера");
 		)
 	),
 	false
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?><br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

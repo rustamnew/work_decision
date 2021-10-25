@@ -1,5 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("image", "/local/templates/main/assets/images/header/06_header.jpg");
 $APPLICATION->SetTitle("Вопросы и ответы");
 ?>
 <?$APPLICATION->IncludeComponent(

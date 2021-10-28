@@ -8,7 +8,7 @@ $APPLICATION->SetTitle("Юристы");
 	array(
 		"COMPONENT_TEMPLATE" => "team",
 		"IBLOCK_TYPE" => "content",
-		"IBLOCK_ID" => "5",
+		"IBLOCK_ID" => $GLOBALS["codingart_block_id"]["content_team_id"],
 		"NEWS_COUNT" => "12",
 		"USE_SEARCH" => "N",
 		"USE_RSS" => "N",

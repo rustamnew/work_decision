@@ -32,7 +32,7 @@ $this->setFrameMode(true);
 						"COUNT_ELEMENTS" => "N",	
 						"COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",	
 						"FILTER_NAME" => "sectionsFilter",	
-						"IBLOCK_ID" => "4",	
+						"IBLOCK_ID" => $GLOBALS["codingart_block_id"]["content_services_id"],	
 						"IBLOCK_TYPE" => "content",	
 						"SECTION_CODE" => "",	
 						"SECTION_FIELDS" => array(	
@@ -77,7 +77,7 @@ $this->setFrameMode(true);
 						),
 						"FILTER_NAME" => "",	
 						"HIDE_LINK_WHEN_NO_DETAIL" => "N",	
-						"IBLOCK_ID" => "10",	
+						"IBLOCK_ID" => $GLOBALS["codingart_block_id"]["content_sidebar-phone_id"],	
 						"IBLOCK_TYPE" => "content",	
 						"INCLUDE_IBLOCK_INTO_CHAIN" => "N",	
 						"INCLUDE_SUBSECTIONS" => "N",	

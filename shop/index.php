@@ -8,7 +8,7 @@ $APPLICATION->SetTitle("Магазин");
 	array(
 		"COMPONENT_TEMPLATE" => "shop",
 		"IBLOCK_TYPE" => "content",
-		"IBLOCK_ID" => "25",
+		"IBLOCK_ID" => $GLOBALS["codingart_block_id"]["catalog_goods_id"],
 		"NEWS_COUNT" => "6",
 		"USE_SEARCH" => "N",
 		"USE_RSS" => "N",

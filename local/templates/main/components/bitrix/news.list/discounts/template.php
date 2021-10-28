@@ -24,7 +24,7 @@ $this->setFrameMode(true);
 				
 				<div class="col-md-6 col-lg-4">
 					<div class="item-careers" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-						<h4><a href='#'><?=$arItem["NAME"]?></a></h4>
+						<h4><a><?=$arItem["NAME"]?></a></h4>
 						<ul>
 							<li class="active"><?echo FormatDateFromDB($arItem["DATE_ACTIVE_TO"], 'SHORT');?></li>
 							<li><?=$arItem["PROPERTIES"]["city"]["VALUE"];?></li>
@@ -33,7 +33,7 @@ $this->setFrameMode(true);
 							<img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="image">
 						</div>
 						<p><?=$arItem["PREVIEW_TEXT"]?></p>
-						<a href="#" class="btn-1 discounts__button"><?echo GetMessage("REQUEST_CALL")?></a>
+						<a href="#" class="summonFormButton btn-1 discounts__button"><?echo GetMessage("REQUEST_CALL")?></a>
 					</div>
 				</div>
 			<?endforeach;?>	

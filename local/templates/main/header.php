@@ -3,6 +3,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	die();
 $isMainPage = $APPLICATION->GetCurPage(false) === '/';
 ?>
+<?require($_SERVER["DOCUMENT_ROOT"].SITE_DIR."include/iblock_id_link.php");?>
 <!doctype html>
 <html lang="ru">
     <head>
@@ -305,7 +306,7 @@ $isMainPage = $APPLICATION->GetCurPage(false) === '/';
                                 ),
                                 "FILTER_NAME" => "",
                                 "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-                                "IBLOCK_ID" => "1",
+                                "IBLOCK_ID" => $GLOBALS["codingart_block_id"]["content_social_id"],
                                 "IBLOCK_TYPE" => "content",
                                 "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
                                 "INCLUDE_SUBSECTIONS" => "N",
@@ -386,7 +387,7 @@ $isMainPage = $APPLICATION->GetCurPage(false) === '/';
                         ),
                         "FILTER_NAME" => "",
                         "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-                        "IBLOCK_ID" => "2",
+                        "IBLOCK_ID" => $GLOBALS["codingart_block_id"]["banners_banner_main_id"],
                         "IBLOCK_TYPE" => "content",
                         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
                         "INCLUDE_SUBSECTIONS" => "N",

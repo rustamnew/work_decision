@@ -73,9 +73,11 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 					</div>
 
 					<div class="row">
-						<div class="col-sm-6">
-							<a class="btn-1" href="<?=SITE_DIR?>about/"><?=$arItem["PROPERTIES"]["text"]["VALUE"];?></a>
-						</div>
+						<?if ($arParams["DISPLAY_ALTERNATIVE"] != 'Y'):?>
+							<div class="col-sm-6">
+								<a class="btn-1" href="<?=SITE_DIR?>about/"><?=$arItem["PROPERTIES"]["text"]["VALUE"];?></a>
+							</div>
+						<?endif;?>
 						<div class="col-sm-6 d-flex align-items-center">
 							<img class="img-fluid sign-about" src="<?echo CFile::GetPath($arItem["PROPERTIES"]["sign"]["VALUE"]);?>" alt="Sign About">
 						</div>

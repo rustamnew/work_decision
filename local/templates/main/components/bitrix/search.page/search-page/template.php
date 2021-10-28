@@ -11,8 +11,14 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 ?>
-<section class="bolg py-100-70">
+<section class="bolg py-70-70 searchpage-section">
 	<div class="container">
+		
+		<?if($arResult["SEARCH"]):?>
+			<h2><?=$arParams["PAGER_TITLE"];?></h2>
+		<?else:?>
+			<h2><?=$arParams["SEARCH_FAIL"];?></h2>
+		<?endif;?>
 
 		<?foreach($arResult["SEARCH"] as $arItem):?>
 			<div class="services-section-item">
@@ -26,3 +32,4 @@
 	<?if($arParams["DISPLAY_BOTTOM_PAGER"] == "Y") echo $arResult["NAV_STRING"];?>
 	</div>
 </section>
+

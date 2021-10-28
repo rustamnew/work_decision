@@ -8,7 +8,7 @@ $APPLICATION->SetTitle("Акции");
 	array(
 		"COMPONENT_TEMPLATE" => "discounts",
 		"IBLOCK_TYPE" => "content",
-		"IBLOCK_ID" => "28",
+		"IBLOCK_ID" => $GLOBALS["codingart_block_id"]["content_discounts_id"],
 		"NEWS_COUNT" => "12",
 		"SORT_BY1" => "SORT",
 		"SORT_ORDER1" => "ASC",

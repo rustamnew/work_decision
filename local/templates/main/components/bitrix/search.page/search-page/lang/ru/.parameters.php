@@ -9,4 +9,6 @@ $MESS["TP_BSP_RATING_TYPE_STANDART_GRAPHIC"] = "Нравится / Не нрав
 $MESS["TP_BSP_RATING_TYPE_LIKE_TEXT"] = "Мне нравится (текстовый)";
 $MESS["TP_BSP_RATING_TYPE_LIKE_GRAPHIC"] = "Мне нравится (графический)";
 $MESS["TP_BSP_PATH_TO_USER_PROFILE"] = "Шаблон пути к профилю пользователя";
+$MESS["SEARCH_FAIL"] = "Сообщение о неудачном поиске";
+$MESS["SEARCH_FAIL_MESSAGE"] = "По вашему запросу ничего не найдено";
 ?>

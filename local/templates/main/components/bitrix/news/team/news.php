@@ -43,7 +43,7 @@ $this->setFrameMode(true);
 		),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "5",
+		"IBLOCK_ID" => $GLOBALS["codingart_block_id"]["content_team_id"],
 		"IBLOCK_TYPE" => "content",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "N",

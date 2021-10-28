@@ -82,7 +82,7 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 					"FILTER_NAME" => "",
 
 					"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-					"IBLOCK_ID" => "19",
+					"IBLOCK_ID" => $GLOBALS["codingart_block_id"]["content_timeline_id"],
 					"IBLOCK_TYPE" => "content",
 					"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 					"INCLUDE_SUBSECTIONS" => "N",

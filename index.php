@@ -1,7 +1,7 @@
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetTitle('Главная');
-?> 
+?>
 
 <?$APPLICATION->IncludeComponent("bitrix:news.list", "features", Array(
 	"ACTIVE_DATE_FORMAT" => "d.m.Y",	
@@ -29,7 +29,7 @@ $APPLICATION->SetTitle('Главная');
 		),
 		"FILTER_NAME" => "",	
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",	
-		"IBLOCK_ID" => "3",	
+		"IBLOCK_ID" => $GLOBALS["codingart_block_id"]["content_features_under_id"],	
 		"IBLOCK_TYPE" => "content",	
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",	
 		"INCLUDE_SUBSECTIONS" => "N",	
@@ -95,7 +95,7 @@ $APPLICATION->SetTitle('Главная');
 		),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "4",
+		"IBLOCK_ID" => $GLOBALS["codingart_block_id"]["content_services_id"],	
 		"IBLOCK_TYPE" => "content",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "N",
@@ -141,7 +141,7 @@ $APPLICATION->SetTitle('Главная');
 	array(
 		"COMPONENT_TEMPLATE" => "about",
 		"IBLOCK_TYPE" => "content",
-		"IBLOCK_ID" => "14",
+		"IBLOCK_ID" => $GLOBALS["codingart_block_id"]["content_about_id"],
 		"NEWS_COUNT" => "1",
 		"SORT_BY1" => "SORT",
 		"SORT_ORDER1" => "ASC",
@@ -233,7 +233,7 @@ $APPLICATION->SetTitle('Главная');
 		),
 		"FILTER_NAME" => "",	
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",	
-		"IBLOCK_ID" => "15",	
+		"IBLOCK_ID" => $GLOBALS["codingart_block_id"]["content_features_id"],
 		"IBLOCK_TYPE" => "content",	
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",	
 		"INCLUDE_SUBSECTIONS" => "N",	
@@ -312,7 +312,7 @@ $APPLICATION->SetTitle('Главная');
 		),
 		"FILTER_NAME" => "",	
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",	
-		"IBLOCK_ID" => "16",	
+		"IBLOCK_ID" => $GLOBALS["codingart_block_id"]["content_partners_id"],	
 		"IBLOCK_TYPE" => "content",	
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",	
 		"INCLUDE_SUBSECTIONS" => "N",	
@@ -353,7 +353,7 @@ $APPLICATION->SetTitle('Главная');
 	array(
 		"COMPONENT_TEMPLATE" => "projects",
 		"IBLOCK_TYPE" => "content",
-		"IBLOCK_ID" => "11",
+		"IBLOCK_ID" => $GLOBALS["codingart_block_id"]["content_projects_id"],
 		"NEWS_COUNT" => "6",
 		"SORT_BY1" => "created_date",
 		"SORT_ORDER1" => "DESC",
@@ -445,7 +445,7 @@ $APPLICATION->SetTitle('Главная');
 		),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "17",
+		"IBLOCK_ID" => $GLOBALS["codingart_block_id"]["content_call-to-action_id"],
 		"IBLOCK_TYPE" => "content",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "N",
@@ -511,7 +511,7 @@ $APPLICATION->SetTitle('Главная');
 		),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "5",
+		"IBLOCK_ID" => $GLOBALS["codingart_block_id"]["content_team_id"],
 		"IBLOCK_TYPE" => "content",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "N",
@@ -580,7 +580,7 @@ $APPLICATION->SetTitle('Главная');
 		),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "20",
+		"IBLOCK_ID" => $GLOBALS["codingart_block_id"]["content_why-us_id"],
 		"IBLOCK_TYPE" => "content",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "N",
@@ -663,7 +663,7 @@ $APPLICATION->SetTitle('Главная');
 		),
 		"FILTER_NAME" => "",	
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",	
-		"IBLOCK_ID" => "21",	
+		"IBLOCK_ID" => $GLOBALS["codingart_block_id"]["content_stats_id"],	
 		"IBLOCK_TYPE" => "content",	
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",	
 		"INCLUDE_SUBSECTIONS" => "N",	
@@ -712,9 +712,9 @@ $APPLICATION->SetTitle('Главная');
 	false
 );?>
 <?$APPLICATION->IncludeComponent(
-	"bitrix:news.list",
-	"timeline",
-	Array(
+	"bitrix:news.list", 
+	"timeline-block", 
+	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
@@ -728,7 +728,7 @@ $APPLICATION->SetTitle('Главная');
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "N",
 		"CHECK_DATES" => "Y",
-		"COMPONENT_TEMPLATE" => "timeline",
+		"COMPONENT_TEMPLATE" => "timeline-block",
 		"DETAIL_URL" => "",
 		"DISPLAY_BOTTOM_PAGER" => "N",
 		"DISPLAY_DATE" => "N",
@@ -737,7 +737,10 @@ $APPLICATION->SetTitle('Главная');
 		"DISPLAY_PREVIEW_TEXT" => "N",
 		"DISPLAY_TOP_PAGER" => "N",
 		"EXPAND" => "N",
-		"FIELD_CODE" => array(0=>"",1=>"",),
+		"FIELD_CODE" => array(
+			0 => "DETAIL_PICTURE",
+			1 => "",
+		),
 		"FILTER_NAME" => "",
 		"FORM_IMAGE" => "/local/templates/main/assets/images/quote/01_quote.jpg",
 		"FORM_PHONE" => "+7 (800) 0000-000",
@@ -745,7 +748,7 @@ $APPLICATION->SetTitle('Главная');
 		"FORM_SUBTITLE" => "Решения принимаются профессионалами. Мы гарантируем высокое качество оказания услуг.",
 		"FORM_TITLE" => "Оставьте заявку",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "19",
+		"IBLOCK_ID" => $GLOBALS["codingart_block_id"]["content_timeline-block_id"],
 		"IBLOCK_TYPE" => "content",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "N",
@@ -762,7 +765,11 @@ $APPLICATION->SetTitle('Главная');
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(0=>"date",1=>"",),
+		"PROPERTY_CODE" => array(
+			0 => "",
+			1 => "date",
+			2 => "",
+		),
 		"SET_BROWSER_TITLE" => "N",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "N",
@@ -770,15 +777,16 @@ $APPLICATION->SetTitle('Главная');
 		"SET_STATUS_404" => "N",
 		"SET_TITLE" => "N",
 		"SHOW_404" => "N",
-		"SHOW_FORM" => "Y",
-		"SHOW_TIMELINE" => "Y",
+		//"SHOW_FORM" => "Y",
+		//"SHOW_TIMELINE" => "Y",
 		"SORT_BY1" => "SORT",
 		"SORT_BY2" => "ACTIVE_FROM",
 		"SORT_ORDER1" => "ASC",
 		"SORT_ORDER2" => "DESC",
 		"STRICT_SECTION_CHECK" => "N",
-		"TITLE" => "История компании"
-	)
+		//"TITLE" => "История компании"
+	),
+	false
 );?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
@@ -809,7 +817,7 @@ $APPLICATION->SetTitle('Главная');
 		),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "18",
+		"IBLOCK_ID" => $GLOBALS["codingart_block_id"]["content_faq_id"],
 		"IBLOCK_TYPE" => "content",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "N",
@@ -855,7 +863,7 @@ $APPLICATION->SetTitle('Главная');
 	array(
 		"COMPONENT_TEMPLATE" => "reviews",
 		"IBLOCK_TYPE" => "content",
-		"IBLOCK_ID" => "12",
+		"IBLOCK_ID" => $GLOBALS["codingart_block_id"]["content_reviews_id"],
 		"NEWS_COUNT" => "6",
 		"SORT_BY1" => "SORT",
 		"SORT_ORDER1" => "ASC",
@@ -948,7 +956,7 @@ $APPLICATION->SetTitle('Главная');
 		),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "7",
+		"IBLOCK_ID" => $GLOBALS["codingart_block_id"]["content_blog_id"],
 		"IBLOCK_TYPE" => "content",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "N",

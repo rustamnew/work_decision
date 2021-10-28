@@ -7,6 +7,12 @@ $arTemplateParameters = array(
 		"TYPE" => "CHECKBOX",
 		"DEFAULT" => "N",
 	),
+	"SEARCH_FAIL" => Array(
+		"PARENT" => "PAGER_SETTINGS",
+		"NAME" => GetMessage("SEARCH_FAIL"),
+		"TYPE" => "STRING",
+		"DEFAULT" => GetMessage("SEARCH_FAIL_MESSAGE"),
+	),
 );
 if(COption::GetOptionString("search", "use_social_rating") == "Y")
 {

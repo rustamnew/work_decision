@@ -138,6 +138,9 @@ p {
 .py-100-70{
     padding: 100px 0 70px 0;
 }
+.py-70-70{
+    padding: 70px 0 70px 0;
+}
 .padding-0{
     padding: 0;
 }
@@ -3820,14 +3823,14 @@ div.bx-component-opener {
     height: 15px;
 }
 
-
+/*
 a:not([href]):not([class]) {
     color: #ffffff;
 }
 a:not([href]):not([class]):hover {
     color: #ffffff;
 }
-
+*/
 .blog-item .img-box ul li:hover a:not([href]):not([class]) {
     color: #ffffff;
 }
@@ -4118,6 +4121,9 @@ section.provide .img-box .statistic-item-icon img{
     transition: all 0.3s ease;
 }
 
+.searchpage-section > .container > h2 {
+    margin-bottom: 40px;
+}
 
 
 

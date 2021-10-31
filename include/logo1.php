@@ -1,1 +1,0 @@
-<img class="img-fluid one" src="/local/templates/main/assets/images/logo/01_logo.png" alt="01 Logo">

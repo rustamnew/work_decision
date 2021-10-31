@@ -28,6 +28,7 @@ $GLOBALS["codingart_block_id"] = array(
     'content_discounts_id' => '28',
     'content_timeline-block_id' => '29',
 
-    'settings_settings_main_id' => '13',
+    'settings_main_id' => '13',
+    'settings_main_element_id' => '44',
 )
 ?>

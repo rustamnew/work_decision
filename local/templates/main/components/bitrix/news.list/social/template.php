@@ -13,22 +13,15 @@
 $this->setFrameMode(true);
 ?>
 
-<?$arItem = $arResult["ITEMS"][0];?>
-
-<?
-$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
-$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
-?>
-
-<ul class="icon-follow" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-	<?if($arItem["PROPERTIES"]["link1"]["VALUE"]):?>
-		<?$path = CFile::GetPath($arItem['PROPERTIES']['icon1']['VALUE']);?>
+<ul class="icon-follow">
+	<?if($GLOBALS["global_info"]["social1_link"]):?>
+		<?$path = CFile::GetPath($GLOBALS["global_info"]["social1_icon"]);?>
 
 		<li>
-			<a class="icon" href="<?=$arItem["PROPERTIES"]["link1"]["VALUE"];?>">
+			<a class="icon" href="<?=$GLOBALS["global_info"]["social1_link"];?>">
 				<?if (stristr($path, '.svg')):?>
 					<?
-					$img_file = CFile::GetPath($arItem['PROPERTIES']['icon1']['VALUE']);
+					$img_file = $path;
 
 					$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
 					if($svg['id']){
@@ -39,20 +32,20 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 					print_r($svg_file);
 					?>
 				<?else:?>
-					<img src=<?echo CFile::GetPath($arItem["PROPERTIES"]["icon1"]["VALUE"]);?>>
+					<img src=<?echo $path;?>>
 				<?endif;?>
 			</a>
 		</li>
 	<?endif;?>
 
-	<?if($arItem["PROPERTIES"]["link2"]["VALUE"]):?>
-		<?$path = CFile::GetPath($arItem['PROPERTIES']['icon2']['VALUE']);?>
+	<?if($GLOBALS["global_info"]["social2_link"]):?>
+		<?$path = CFile::GetPath($GLOBALS["global_info"]["social2_icon"]);?>
 
 		<li>
-			<a class="icon" href="<?=$arItem["PROPERTIES"]["link2"]["VALUE"];?>">
+			<a class="icon" href="<?=$GLOBALS["global_info"]["social2_link"];?>">
 				<?if (stristr($path, '.svg')):?>
 					<?
-					$img_file = CFile::GetPath($arItem['PROPERTIES']['icon2']['VALUE']);
+					$img_file = $path;
 
 					$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
 					if($svg['id']){
@@ -63,20 +56,20 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 					print_r($svg_file);
 					?>
 				<?else:?>
-					<img src=<?echo CFile::GetPath($arItem["PROPERTIES"]["icon2"]["VALUE"]);?>>
+					<img src=<?echo $path;?>>
 				<?endif;?>
 			</a>
 		</li>
 	<?endif;?>
 
-	<?if($arItem["PROPERTIES"]["link3"]["VALUE"]):?>
-		<?$path = CFile::GetPath($arItem['PROPERTIES']['icon3']['VALUE']);?>
+	<?if($GLOBALS["global_info"]["social3_link"]):?>
+		<?$path = CFile::GetPath($GLOBALS["global_info"]["social3_icon"]);?>
 
 		<li>
-			<a class="icon" href="<?=$arItem["PROPERTIES"]["link3"]["VALUE"];?>">
+			<a class="icon" href="<?=$GLOBALS["global_info"]["social3_link"];?>">
 				<?if (stristr($path, '.svg')):?>
 					<?
-					$img_file = CFile::GetPath($arItem['PROPERTIES']['icon3']['VALUE']);
+					$img_file = $path;
 
 					$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
 					if($svg['id']){
@@ -87,20 +80,20 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 					print_r($svg_file);
 					?>
 				<?else:?>
-					<img src=<?echo CFile::GetPath($arItem["PROPERTIES"]["icon2"]["VALUE"]);?>>
+					<img src=<?echo $path;?>>
 				<?endif;?>
 			</a>
 		</li>
 	<?endif;?>
 
-	<?if($arItem["PROPERTIES"]["link4"]["VALUE"]):?>
-		<?$path = CFile::GetPath($arItem['PROPERTIES']['icon4']['VALUE']);?>
+	<?if($GLOBALS["global_info"]["social4_link"]):?>
+		<?$path = CFile::GetPath($GLOBALS["global_info"]["social4_icon"]);?>
 
 		<li>
-			<a class="icon" href="<?=$arItem["PROPERTIES"]["link4"]["VALUE"];?>">
+			<a class="icon" href="<?=$GLOBALS["global_info"]["social4_link"];?>">
 				<?if (stristr($path, '.svg')):?>
 					<?
-					$img_file = CFile::GetPath($arItem['PROPERTIES']['icon4']['VALUE']);
+					$img_file = $path;
 
 					$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
 					if($svg['id']){
@@ -111,20 +104,20 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 					print_r($svg_file);
 					?>
 				<?else:?>
-					<img src=<?echo CFile::GetPath($arItem["PROPERTIES"]["icon4"]["VALUE"]);?>>
+					<img src=<?echo $path;?>>
 				<?endif;?>
 			</a>
 		</li>
 	<?endif;?>
 
-	<?if($arItem["PROPERTIES"]["link5"]["VALUE"]):?>
-		<?$path = CFile::GetPath($arItem['PROPERTIES']['icon5']['VALUE']);?>
+	<?if($GLOBALS["global_info"]["social5_link"]):?>
+		<?$path = CFile::GetPath($GLOBALS["global_info"]["social5_icon"]);?>
 
 		<li>
-			<a class="icon" href="<?=$arItem["PROPERTIES"]["link5"]["VALUE"];?>">
+			<a class="icon" href="<?=$GLOBALS["global_info"]["social5_link"];?>">
 				<?if (stristr($path, '.svg')):?>
 					<?
-					$img_file = CFile::GetPath($arItem['PROPERTIES']['icon5']['VALUE']);
+					$img_file = $path;
 
 					$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
 					if($svg['id']){
@@ -135,7 +128,7 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 					print_r($svg_file);
 					?>
 				<?else:?>
-					<img src=<?echo CFile::GetPath($arItem["PROPERTIES"]["icon5"]["VALUE"]);?>>
+					<img src=<?echo $path;?>>
 				<?endif;?>
 			</a>
 		</li>

@@ -3,7 +3,21 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	die();
 $isMainPage = $APPLICATION->GetCurPage(false) === '/';
 ?>
+
 <?require($_SERVER["DOCUMENT_ROOT"].SITE_DIR."include/iblock_id_link.php");?>
+<?
+$GLOBALS['global_info'];
+if(CModule::IncludeModule('iblock')) {
+    $db_props = CIBlockElement::GetProperty($GLOBALS["codingart_block_id"]["settings_main_id"], $GLOBALS["codingart_block_id"]["settings_main_element_id"], 'sort', 'asc', array());
+    while($ar_props = $db_props->Fetch()){
+        $GLOBALS["global_info"][$ar_props["CODE"]] = $ar_props["VALUE"];
+    }
+}
+?>
+
+
+
+
 <!doctype html>
 <html lang="ru">
     <head>
@@ -89,27 +103,32 @@ $isMainPage = $APPLICATION->GetCurPage(false) === '/';
                     <div class="container">
                         <div class="nav-top-box d-flex align-items-center justify-content-between">
                             <ul class="info">
-                                <li>
-                                    <?$APPLICATION->IncludeFile(SITE_DIR."include/header_email.php", 
-                                        array(), 
-                                        array("MODE" => "html"));?>
-                                </li>
-                                <li>
-                                    <?$APPLICATION->IncludeFile(SITE_DIR."include/header_phone1.php", 
-                                        array(), 
-                                        array("MODE" => "html"));?>
-                                    
-                                </li>
+                                <?if($GLOBALS['global_info']['contacts_email1'] and $GLOBALS['global_info']['contacts_email_show']):?>
+                                    <li>
+                                        <a href="mailto:<?=$GLOBALS['global_info']['contacts_email1'];?>">
+                                            Email : <?=$GLOBALS['global_info']['contacts_email1'];?>
+                                        </a>
+                                    </li>
+                                <?endif;?>
+                                <?if($GLOBALS['global_info']['contacts_phone1'] and $GLOBALS['global_info']['contacts_phone_show']):?>
+                                    <li>
+                                        <a href="tel:<?=$GLOBALS['global_info']['contacts_phone1'];?>">
+                                            Телефон : <?=$GLOBALS['global_info']['contacts_phone1'];?>
+                                        </a>
+                                    </li>
+                                <?endif;?>
                             </ul>
                             <ul class="icon-follow">
                                 <li><a class="icon open-search-box" href="#"><i class="fas fa-search"></i></a></li>
                                 <li><a class="icon open-menu" href="#"><i class="fas fa-th"></i></a></li>
-                                <li>
-                                    <a class="summonFormButton btn-1 btn-2" href="<?=SITE_DIR?>">
-                                        <?$APPLICATION->IncludeFile(SITE_DIR."include/header_button.php", 
-                                        array(), array("MODE" => "html"));?>
-                                    </a>
-                                </li>
+                                
+                                <?if($GLOBALS['global_info']['header_button_show']):?>
+                                    <li>
+                                        <a class="summonFormButton btn-1 btn-2" href="<?=SITE_DIR?>">
+                                            <?=$GLOBALS['global_info']['header_button_text'];?>
+                                        </a>
+                                    </li>
+                                <?endif;?>
                             </ul>
                         </div>
                     </div>
@@ -121,29 +140,41 @@ $isMainPage = $APPLICATION->GetCurPage(false) === '/';
                         <div class="box-content d-flex align-items-center justify-content-between">
                             <div class="logo">
                                 <a <?if(!$isMainPage):?> href="<?=SITE_DIR?>" <?endif;?> class="logo-nav">
-                                    <?$APPLICATION->IncludeComponent(
-                                        "bitrix:main.include",
-                                        "",
-                                        Array(
-                                            "AREA_FILE_SHOW" => "file",
-                                            "AREA_FILE_SUFFIX" => "inc",
-                                            "EDIT_TEMPLATE" => "",
-                                            "PATH" => "/include/logo1.php"
-                                        )
-                                    );?>
-                                    
+                                    <?$path = CFile::GetPath($GLOBALS['global_info']['header_logo1']);?>
+                                    <?if (stristr($path, '.svg')):?>
+                                        <?
+                                        $img_file = $path;
 
-                                    <?$APPLICATION->IncludeComponent(
-                                        "bitrix:main.include",
-                                        "",
-                                        Array(
-                                            "AREA_FILE_SHOW" => "file",
-                                            "AREA_FILE_SUFFIX" => "inc",
-                                            "EDIT_TEMPLATE" => "",
-                                            "PATH" => "/include/logo2.php"
-                                        )
-                                    );?>
-                                    
+                                        $svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
+                                        if($svg['id']){
+                                            $img_grup = $img_file.'#'.$svg['id'];
+                                        }
+
+                                        $svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
+                                        print_r($svg_file);
+                                        ?>
+                                    <?else:?>
+                                        <img class="img-fluid one" src=<?=$path?> alt="01 Logo">
+                                    <?endif;?>
+
+
+
+                                    <?$path = CFile::GetPath($GLOBALS['global_info']['header_logo2']);?>
+                                    <?if (stristr($path, '.svg')):?>
+                                        <?
+                                        $img_file = $path;
+
+                                        $svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
+                                        if($svg['id']){
+                                            $img_grup = $img_file.'#'.$svg['id'];
+                                        }
+
+                                        $svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
+                                        print_r($svg_file);
+                                        ?>
+                                    <?else:?>
+                                        <img class="img-fluid two" src=<?=$path?> alt="02 Logo">
+                                    <?endif;?>
                                 </a>
 
                                 <a href="#open-nav-bar-menu" class="open-nav-bar">
@@ -174,21 +205,29 @@ $isMainPage = $APPLICATION->GetCurPage(false) === '/';
                             );?>
 
                             
-                            <a href="tel:" class="info-nav">
-                                <i class="flaticon-call"></i>
-                                <div class="contact-nav">
-                                    
-                                        <?$APPLICATION->IncludeFile(SITE_DIR."include/header_phone2.php", 
-                                        array(), 
-                                        array("MODE" => "html"));?>
-                                    
-                                    
-                                        <?$APPLICATION->IncludeFile(SITE_DIR."include/header_phone2_subtitle.php", 
-                                        array(), 
-                                        array("MODE" => "html"));?>
-                                    
-                                </div>
-                            </a>
+                            <?if($GLOBALS["global_info"]["header_calltoaction_show"]):?>
+                                <a href="tel:<?=$GLOBALS["global_info"]["header_calltoaction_phone"];?>" class="info-nav">
+                                    <div class="info-nav-image">
+                                        <?$path = CFile::GetPath($GLOBALS["global_info"]["header_calltoaction_icon"]);?>
+                                        <?if (stristr($path, '.svg')):?>
+                                            <?
+                                            $img_file = $path;
+                                            $svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
+                                            if($svg['id']){
+                                                $img_grup = $img_file.'#'.$svg['id'];
+                                            }
+                                            $svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
+                                            print_r($svg_file);?>
+                                        <?else:?>
+                                            <img src=<?=$path?>>
+                                        <?endif;?>
+                                    </div>
+                                    <div class="contact-nav">
+                                        <p><?=$GLOBALS["global_info"]["header_calltoaction_phone"];?></p>
+                                        <p><?=$GLOBALS["global_info"]["header_calltoaction_description"];?></p>
+                                    </div>
+                                </a>
+                            <?endif;?>
                         </div>
                     </div>
                 </nav>
@@ -201,81 +240,78 @@ $isMainPage = $APPLICATION->GetCurPage(false) === '/';
                 <div class="inner-menu">
                     <div class="website-info">
                         <a href="<?=SITE_DIR?>" class="logo">
-                            <?$APPLICATION->IncludeComponent(
-                                "bitrix:main.include",
-                                "",
-                                Array(
-                                    "AREA_FILE_SHOW" => "file",
-                                    "AREA_FILE_SUFFIX" => "inc",
-                                    "EDIT_TEMPLATE" => "",
-                                    "PATH" => "/include/logo3.php"
-                                )
-                            );?>
+                            <?$path = CFile::GetPath($GLOBALS['global_info']['header_logo2']);?>
+                            <?if (stristr($path, '.svg')):?>
+                                <?
+                                $img_file = $path;
+
+                                $svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
+                                if($svg['id']){
+                                    $img_grup = $img_file.'#'.$svg['id'];
+                                }
+
+                                $svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
+                                print_r($svg_file);
+                                ?>
+                            <?else:?>
+                                <img class="img-fluid two" src=<?=$path?> alt="02 Logo">
+                            <?endif;?>
+
                         </a>
-                        <?$APPLICATION->IncludeFile(SITE_DIR."include/header_side_text.php", 
-                        array(), 
-                        array("MODE" => "html"));?>
+                        
+                        <p><?=$GLOBALS["global_info"]["header_extra_description"];?></p>    
                     </div>
                     <div class="contact-info">
                         <h4>
-                            <?$APPLICATION->IncludeFile(SITE_DIR."include/header_side_contacts.php", 
-                            array(), 
-                            array("MODE" => "html"));?>
+                            <?=$GLOBALS["global_info"]["header_extra_title_contacts"];?>
                         </h4>
 
                         <div class="contact-box">
                             <i class="flaticon-call"></i>
                             <div class="box">
-                                <p>
-                                    <?$APPLICATION->IncludeFile(SITE_DIR."include/header_side_phone1.php", 
-                                    array(), 
-                                    array("MODE" => "html"));?>
-                                </p>
-                                <p>
-                                    <?$APPLICATION->IncludeFile(SITE_DIR."include/header_side_phone2.php", 
-                                    array(), 
-                                    array("MODE" => "html"));?>
-                                </p>
+                                <?if($GLOBALS['global_info']['contacts_phone1']):?>
+                                    <a href="tel:<?=$GLOBALS['global_info']['contacts_phone1'];?>">
+                                        <p><?=$GLOBALS['global_info']['contacts_phone1'];?></p>
+                                    </a>
+                                <?endif;?>
+                                <?if($GLOBALS['global_info']['contacts_phone2']):?>
+                                    <a href="tel:<?=$GLOBALS['global_info']['contacts_phone2'];?>">
+                                        <p><?=$GLOBALS['global_info']['contacts_phone2'];?></p>
+                                    </a>
+                                <?endif;?>
                             </div>
                         </div>
                         <div class="contact-box">
                             <i class="flaticon-email"></i>
                             <div class="box">
-                                <p>
-                                    <?$APPLICATION->IncludeFile(SITE_DIR."include/header_side_email1.php", 
-                                        array(), 
-                                        array("MODE" => "html"));?>
-                                </p>
-                                <p>
-                                    <?$APPLICATION->IncludeFile(SITE_DIR."include/header_side_email2.php", 
-                                        array(), 
-                                        array("MODE" => "html"));?>
-                                </p>
+                                <?if($GLOBALS['global_info']['contacts_email1']):?>
+                                    <a href="mailto:<?=$GLOBALS['global_info']['contacts_email1'];?>">
+                                        <p><?=$GLOBALS['global_info']['contacts_email1'];?></p>
+                                    </a>
+                                <?endif;?>
+                                <?if($GLOBALS['global_info']['contacts_email2']):?>
+                                    <a href="mailto:<?=$GLOBALS['global_info']['contacts_email2'];?>">
+                                        <p><?=$GLOBALS['global_info']['contacts_email2'];?></p>
+                                    </a>
+                                <?endif;?>
                             </div>
                         </div>
                         <div class="contact-box">
                             <i class="flaticon-location"></i>
                             <div class="box">
-                                <p>
-                                    <?$APPLICATION->IncludeFile(SITE_DIR."include/header_side_address1.php", 
-                                        array(), 
-                                        array("MODE" => "html"));?>
-                                </p>
-                                <p>
-                                    <?$APPLICATION->IncludeFile(SITE_DIR."include/header_side_address2.php", 
-                                        array(), 
-                                        array("MODE" => "html"));?>
-                                </p>
+                                <?if($GLOBALS['global_info']['contacts_address1']):?>
+                                    <p><?=$GLOBALS['global_info']['contacts_address1'];?></p>
+                                <?endif;?>
+                                <?if($GLOBALS['global_info']['contacts_address2']):?>
+                                    <p><?=$GLOBALS['global_info']['contacts_address2'];?></p>
+                                <?endif;?>
                             </div>
                         </div>
                     </div>
                     <div class="follow-us">
                         <h4>
-                            <?$APPLICATION->IncludeFile(SITE_DIR."include/header_side_follow.php", 
-                                array(), 
-                                array("MODE" => "html"));?>
+                            <?=$GLOBALS["global_info"]["header_extra_title_socials"];?>
                         </h4>
-
                         
                         <?$APPLICATION->IncludeComponent(
                             "bitrix:news.list", 
@@ -465,5 +501,10 @@ $isMainPage = $APPLICATION->GetCurPage(false) === '/';
                 ),
                 false
             );?>
+
+
+
+
+
 
             

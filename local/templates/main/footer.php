@@ -8,19 +8,25 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                     <div class="row">
                         <div class="col-sm-12 col-md-6 col-lg-3">
                             <div class="logo">
-                                <?$APPLICATION->IncludeComponent(
-                                    "bitrix:main.include",
-                                    "",
-                                    Array(
-                                        "AREA_FILE_SHOW" => "file",
-                                        "AREA_FILE_SUFFIX" => "inc",
-                                        "EDIT_TEMPLATE" => "",
-                                        "PATH" => "/include/logo_footer.php"
-                                    )
-                                );?>
-                                <?$APPLICATION->IncludeFile(SITE_DIR."include/footer_description.php", 
-                                    array(), 
-                                    array("MODE" => "html"));?>
+                                
+                                <?$path = CFile::GetPath($GLOBALS['global_info']['footer_logo']);?>
+                                <?if (stristr($path, '.svg')):?>
+                                    <?
+                                    $img_file = $path;
+
+                                    $svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
+                                    if($svg['id']){
+                                        $img_grup = $img_file.'#'.$svg['id'];
+                                    }
+
+                                    $svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
+                                    print_r($svg_file);
+                                    ?>
+                                <?else:?>
+                                    <img class="img-fluid" src=<?=$path?> alt="footer Logo">
+                                <?endif;?>
+
+                                <p><?=$GLOBALS["global_info"]["footer_description"]["TEXT"];?></p>
                                 
                                 <?$APPLICATION->IncludeComponent(
                                     "bitrix:news.list", 
@@ -94,90 +100,105 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                             </div>
                         </div>
 
+                        <?if($GLOBALS["global_info"]["footer_show_menu1"]):?>
+                            <div class="col-sm-6 col-md-6 col-lg-2">
+                                <div class="footer-title">
+                                    <h4>
+                                        <?=$GLOBALS["global_info"]["footer_title_menu1"];?>
+                                    </h4>
+                                </div>
 
-                        <div class="col-sm-6 col-md-6 col-lg-2">
-                            <div class="footer-title">
-                                <h4>
-                                    <?$APPLICATION->IncludeFile(SITE_DIR."include/footer_title1.php", 
-                                        array(), 
-                                        array("MODE" => "html"));?>
-                                </h4>
-                            </div>
-
-                            <?$APPLICATION->IncludeComponent(
-                                "bitrix:menu", 
-                                "menu_footer", 
-                                array(
-                                    "COMPONENT_TEMPLATE" => "menu_footer",
-                                    "ROOT_MENU_TYPE" => "bottom1",
-                                    "MENU_CACHE_TYPE" => "N",
-                                    "MENU_CACHE_TIME" => "3600",
-                                    "MENU_CACHE_USE_GROUPS" => "Y",
-                                    "MENU_CACHE_GET_VARS" => array(
+                                <?$APPLICATION->IncludeComponent(
+                                    "bitrix:menu", 
+                                    "menu_footer", 
+                                    array(
+                                        "COMPONENT_TEMPLATE" => "menu_footer",
+                                        "ROOT_MENU_TYPE" => "bottom1",
+                                        "MENU_CACHE_TYPE" => "N",
+                                        "MENU_CACHE_TIME" => "3600",
+                                        "MENU_CACHE_USE_GROUPS" => "Y",
+                                        "MENU_CACHE_GET_VARS" => array(
+                                        ),
+                                        "MAX_LEVEL" => "1",
+                                        "CHILD_MENU_TYPE" => "left",
+                                        "USE_EXT" => "N",
+                                        "DELAY" => "N",
+                                        "ALLOW_MULTI_SELECT" => "N"
                                     ),
-                                    "MAX_LEVEL" => "1",
-                                    "CHILD_MENU_TYPE" => "left",
-                                    "USE_EXT" => "N",
-                                    "DELAY" => "N",
-                                    "ALLOW_MULTI_SELECT" => "N"
-                                ),
-                                false
-                            );?>
-                        </div>
-
-
-                        <div class="col-sm-6 col-md-6 col-lg-2">
-                            <div class="footer-title">
-                                <h4>
-                                    <?$APPLICATION->IncludeFile(SITE_DIR."include/footer_title2.php", 
-                                        array(), 
-                                        array("MODE" => "html"));?>
-                                </h4>
+                                    false
+                                );?>
                             </div>
+                        <?endif;?> 
 
-                            <?$APPLICATION->IncludeComponent(
-                                "bitrix:menu", 
-                                "menu_footer", 
-                                array(
-                                    "COMPONENT_TEMPLATE" => "menu_footer",
-                                    "ROOT_MENU_TYPE" => "bottom2",
-                                    "MENU_CACHE_TYPE" => "N",
-                                    "MENU_CACHE_TIME" => "3600",
-                                    "MENU_CACHE_USE_GROUPS" => "Y",
-                                    "MENU_CACHE_GET_VARS" => array(
+                        <?if($GLOBALS["global_info"]["footer_show_menu2"]):?>
+                            <div class="col-sm-6 col-md-6 col-lg-2">
+                                <div class="footer-title">
+                                    <h4>
+                                        <?=$GLOBALS["global_info"]["footer_title_menu2"];?>
+                                    </h4>
+                                </div>
+
+                                <?$APPLICATION->IncludeComponent(
+                                    "bitrix:menu", 
+                                    "menu_footer", 
+                                    array(
+                                        "COMPONENT_TEMPLATE" => "menu_footer",
+                                        "ROOT_MENU_TYPE" => "bottom2",
+                                        "MENU_CACHE_TYPE" => "N",
+                                        "MENU_CACHE_TIME" => "3600",
+                                        "MENU_CACHE_USE_GROUPS" => "Y",
+                                        "MENU_CACHE_GET_VARS" => array(
+                                        ),
+                                        "MAX_LEVEL" => "1",
+                                        "CHILD_MENU_TYPE" => "left",
+                                        "USE_EXT" => "N",
+                                        "DELAY" => "N",
+                                        "ALLOW_MULTI_SELECT" => "N"
                                     ),
-                                    "MAX_LEVEL" => "1",
-                                    "CHILD_MENU_TYPE" => "left",
-                                    "USE_EXT" => "N",
-                                    "DELAY" => "N",
-                                    "ALLOW_MULTI_SELECT" => "N"
-                                ),
-                                false
-                            );?>
-                        </div>
-
+                                    false
+                                );?>
+                            </div>
+                        <?endif;?> 
 
                         <div class="col-sm-12 col-md-6 col-lg-4">
                             <div class="footer-title">
                                 <h4>
-                                    <?$APPLICATION->IncludeFile(SITE_DIR."include/footer_title3.php", 
-                                        array(), 
-                                        array("MODE" => "html"));?>
+                                    <?=$GLOBALS["global_info"]["footer_title_contacts"];?>
                                 </h4>
                             </div>
                             
-                            <?$APPLICATION->IncludeFile(SITE_DIR."include/footer_text.php", 
-                                array(), 
-                                array("MODE" => "html"));?>
-                            
+                            <?if($GLOBALS['global_info']['contacts_address_show']):?>
+                                <h4><?=$GLOBALS['global_info']['footer_title_address']?></h4>
+                                <p>
+                                    <?=$GLOBALS['global_info']['contacts_address1']?>
+                                    <br>
+                                    <?=$GLOBALS['global_info']['contacts_address2']?>
+                                </p>
+                            <?endif;?>
+
+                            <?if($GLOBALS['global_info']['contacts_phone_show']):?>
+                                <h4><?=$GLOBALS['global_info']['footer_title_phone']?></h4>
+                                <p>
+                                    <?=$GLOBALS['global_info']['contacts_phone1']?>
+                                    <br>
+                                    <?=$GLOBALS['global_info']['contacts_phone2']?>
+                                </p>
+                            <?endif;?>
+
+                            <?if($GLOBALS['global_info']['contacts_email_show']):?>
+                                <h4><?=$GLOBALS['global_info']['footer_title_email']?></h4>
+                                <p>
+                                    <?=$GLOBALS['global_info']['contacts_email1']?>
+                                    <br>
+                                    <?=$GLOBALS['global_info']['contacts_email2']?>
+                                </p>
+                            <?endif;?>
                         </div>
                     </div>
                 </div>
                 <div class="copyright">
                     <div class="container">
-                        <?$APPLICATION->IncludeFile(SITE_DIR."include/footer_copyright.php", 
-                            array(), 
-                            array("MODE" => "html"));?>
+                        <p><?=$GLOBALS['global_info']['footer_copyright'];?></p>
                         
                         <?$APPLICATION->IncludeComponent(
                                 "bitrix:menu", 

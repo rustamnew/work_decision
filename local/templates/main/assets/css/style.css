@@ -98,6 +98,13 @@ button:focus {
     /*color: #FFF;*/
 }
 
+.nav-top-box a,
+.nav-top-box a:hover,
+.nav-top-box a:focus,
+.nav-top-box button:focus {
+    color: #FFF;
+}
+
 /* :: Typography */
 h1,
 h2,
@@ -4126,11 +4133,38 @@ section.provide .img-box .statistic-item-icon img{
 }
 
 
+.menu-box .inner-menu .contact-info .contact-box .box a {
+    display: flex;
+    width: max-content;
+}
+
+.info-nav-image {
+    float: left;
+}
+.info-nav-image svg {
+    height: 30px;
+    fill: #ffffff;
+}
+.nav-bar.active .info-nav-image svg {
+    fill: #262B3E;
+}
+
+.active-dark-mode-decision .menu-box p {
+    color: #9B9B9B;
+} 
+
+.footer p {
+    color: #F4F4F4;
+}
+.footer h4 {
+    color: #F4F4F4;
+}
 
 /*custom contacts*/
 
 .wrap-get-in-touch {
     position: relative;
+    display: flex;
 }
 
 .flat-get-in-touch .container {
@@ -4172,9 +4206,6 @@ section.provide .img-box .statistic-item-icon img{
     background-color: #fff;
     box-shadow: 0px 0px 10px 0px #eee;
 
-    top: 0;
-    bottom: 0;
-    position: absolute;
 }
 
 .flat-get-in-touch .get-in-touch h2 {
@@ -4239,16 +4270,12 @@ section.provide .img-box .statistic-item-icon img{
 
 .flat-get-in-touch .contact-info {
     width: 45%;
-    display: inline-block;
+    
     background-color: #C89D66;
     padding: 74px 79px 58px;
     background-image: url(../image/contact/contact1.png);
     background-repeat: no-repeat;
     background-position: top right;
-
-        
-    left: 55%;
-    position: relative;
 }
 
 .flat-get-in-touch .contact-info h3 {
@@ -4340,6 +4367,9 @@ section.provide .img-box .statistic-item-icon img{
 }
 
 @media only screen and (max-width: 767px) {
+    .wrap-get-in-touch {
+        flex-direction: column;
+    }
     
     .flat-get-in-touch .get-in-touch {
         width: 100%;

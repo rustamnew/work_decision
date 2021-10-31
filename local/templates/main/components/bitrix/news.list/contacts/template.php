@@ -41,6 +41,7 @@ $this->setFrameMode(true);
                 <h3><?=$arItem["PROPERTIES"]["title2"]["VALUE"];?></h3>
 
                 <ul>
+                <?if($GLOBALS['global_info']['contacts_phone_show']):?>
                     <li class="clearfix">
                         <div class="wrap-icon">
 							<?$path = CFile::GetPath($arItem['PROPERTIES']['icon_phone']['VALUE']);?>
@@ -62,11 +63,14 @@ $this->setFrameMode(true);
                         </div>
                         <div class="wrap-info">
                             <h2><?=$arItem["PROPERTIES"]["title_phone"]["VALUE"];?></h2>
-                            <p class="top"><?=$arItem["PROPERTIES"]["phone"]["VALUE"];?></p>
-                            <!--<p class="bottom">(898) 6784 09878 78</p>-->
+                            <p class="top"><?=$GLOBALS['global_info']['contacts_phone1'];?></p>
+                            <p class="bottom"><?=$GLOBALS['global_info']['contacts_phone2'];?></p>
                         </div>
                     </li>
-                    <li class="center clearfix">
+                <?endif;?>
+
+                <?if($GLOBALS['global_info']['contacts_email_show']):?>
+                    <li class="clearfix">
                         <div class="wrap-icon">
 							<?$path = CFile::GetPath($arItem['PROPERTIES']['icon_email']['VALUE']);?>
 
@@ -87,11 +91,14 @@ $this->setFrameMode(true);
                         </div>
                         <div class="wrap-info">
                             <h2><?=$arItem["PROPERTIES"]["title_email"]["VALUE"];?></h2>
-                            <p class="top"><?=$arItem["PROPERTIES"]["email"]["VALUE"];?></p>
-                            <!--<p>web.info@example.com</p>-->
+                            <p class="top"><?=$GLOBALS['global_info']['contacts_email1'];?></p>
+                            <p class="bottom"><?=$GLOBALS['global_info']['contacts_email2'];?></p>
                         </div>
                     </li>
-                    <li class="bottom clearfix">
+                <?endif;?>
+
+                <?if($GLOBALS['global_info']['contacts_address_show']):?>
+                    <li class="clearfix">
                         <div class="wrap-icon">
 							<?$path = CFile::GetPath($arItem['PROPERTIES']['icon_address']['VALUE']);?>
 
@@ -112,10 +119,11 @@ $this->setFrameMode(true);
                         </div>
                         <div class="wrap-info">
                             <h2><?=$arItem["PROPERTIES"]["title_address"]["VALUE"];?></h2>
-                            <p class="top"><?=$arItem["PROPERTIES"]["address"]["VALUE"];?></p>
-                            <!--<p class="top">г. Казань, ул. Петербургская, д. 50</p>-->
+                            <p class="top"><?=$GLOBALS['global_info']['contacts_address1'];?></p>
+                            <p class="bottom"><?=$GLOBALS['global_info']['contacts_address2'];?></p>
                         </div>
                     </li>
+                <?endif;?>
                 </ul>
             </div>
         </div>

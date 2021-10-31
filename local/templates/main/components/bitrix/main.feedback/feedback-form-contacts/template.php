@@ -29,7 +29,7 @@ if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();
 
 	<input type="email" name="user_email" value="" class=" email" placeholder="<?echo GetMessage("YOUR_EMAIL")?>" required>
 
-	<textarea name="message" name="MESSAGE" cols="40" rows="10" class="message" placeholder="<?echo GetMessage("YOUR_MESSAGE")?>" required></textarea>
+	<textarea name="MESSAGE" cols="40" rows="10" class="message" placeholder="<?echo GetMessage("YOUR_MESSAGE")?>" required></textarea>
 	
 	<?if($arParams["USE_CAPTCHA"] == "Y"):?>
 		<div class="mf-captcha">

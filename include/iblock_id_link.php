@@ -8,7 +8,7 @@ $GLOBALS["codingart_block_id"] = array(
     'content_features_under_id' => '3',
     'content_services_id' => '4',
     'content_team_id' => '5',
-    'content_history_id' => '6',
+    
     'content_blog_id' => '7',
     'content_sidebar-phone_id' => '10',
     'content_projects_id' => '11',

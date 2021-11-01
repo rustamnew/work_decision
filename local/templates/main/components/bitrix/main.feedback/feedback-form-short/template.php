@@ -30,6 +30,9 @@ if($arResult["OK_MESSAGE"] <> '')
 		<div class="subscribe-item">
 			<input type="email" name="user_email" placeholder="<?echo GetMessage("YOUR_EMAIL")?>" required>
 		</div>
+		<div class="subscribe-item">
+			<textarea name="MESSAGE" placeholder="<?echo GetMessage("YOUR_MESSAGE")?>" required></textarea>
+		</div>
 
 		<div class="subscribe-item">
 			<input type="hidden" name="PARAMS_HASH" value="<?=$arResult["PARAMS_HASH"]?>">

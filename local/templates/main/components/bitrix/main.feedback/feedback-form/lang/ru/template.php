@@ -6,6 +6,6 @@ $MESS ['MFT_CAPTCHA'] = "Защита от автоматических сооб
 $MESS ['MFT_CAPTCHA_CODE'] = "Введите слово на картинке";
 $MESS ['MFT_SUBMIT'] = "Отправить";
 $MESS ['YOUR_NAME'] = "Имя";
-$MESS ['YOUR_PHONE'] = "Номер телефона";
+$MESS ['YOUR_EMAIL'] = "Email";
 $MESS ['YOUR_MESSAGE'] = "Сообщение";
 ?>

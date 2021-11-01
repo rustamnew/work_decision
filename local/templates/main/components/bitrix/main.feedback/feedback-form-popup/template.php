@@ -31,6 +31,7 @@ if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();
 		
 		<input class="summonedFormInputName" type="text" name="user_name" placeholder="<?echo GetMessage("YOUR_NAME")?>" required>
 		<input class="summonedFormInputEmail" type="email" name="user_email" placeholder="<?echo GetMessage("YOUR_EMAIL")?>" required>
+		<textarea class="summonedFormInputMessage" name="MESSAGE" placeholder="<?echo GetMessage("YOUR_MESSAGE")?>" required></textarea>
 		<input type="hidden" name="PARAMS_HASH" value="<?=$arResult["PARAMS_HASH"]?>">
 		<input type="submit" name="submit" value="<?=GetMessage("MFT_SUBMIT")?>" class="summonedFormInputSubmit">
 

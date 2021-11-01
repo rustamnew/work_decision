@@ -2328,16 +2328,17 @@ header.navs.active{
 .subscribe .sec-title h3{
     margin-top: 0;
 }
-.subscribe input{
+.subscribe input, 
+.subscribe textarea{
     border: 2px solid #E9E9E9;
     padding: 12px;
     width: 100%;
-    //color: #A5A5A5;
     font-size: 13px;
     margin-bottom: 30px;
     border-radius: 2px;
 }
-.subscribe input:focus{
+.subscribe input:focus, 
+.subscribe textarea:focus{
     border: 2px solid #C89D66;
 }
 
@@ -4437,7 +4438,6 @@ section.provide .img-box .statistic-item-icon img{
     height: 50%;
     max-width: 510px;
     min-height: 400px;
-    max-height: 450px;
 }
 
 
@@ -4448,7 +4448,7 @@ section.provide .img-box .statistic-item-icon img{
 
 
 
-.summonedForm input {
+.summonedForm input, .summonedForm textarea{
     margin-bottom: 30px;
     width: 80%;
     border-radius: 5px;
@@ -4456,6 +4456,10 @@ section.provide .img-box .statistic-item-icon img{
     background-color: #F2F2F2;
     box-sizing: content-box;
     border: 2px solid transparent;
+}
+
+.summonedForm textarea {
+    min-height: 60px;
 }
 
 .summonedForm .summonedFormInputSubmit {

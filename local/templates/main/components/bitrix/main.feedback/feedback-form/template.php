@@ -27,34 +27,36 @@ if($arResult["OK_MESSAGE"] <> '')
 	<div class="row">
 		<div class="col-md-6">
 			<div class="quote-item">
-				<input type="text" name="user_name" placeholder="<?echo GetMessage("YOUR_NAME")?>">
+				<input type="text" name="user_name" placeholder="<?echo GetMessage("YOUR_NAME")?>" required>
 			</div>
 		</div>
 		<div class="col-md-6">
 			<div class="quote-item">
-				<input type="tel" name="user_phone" placeholder="<?echo GetMessage("YOUR_PHONE")?>">
+				<input type="email" name="user_email" placeholder="<?echo GetMessage("YOUR_EMAIL")?>" required>
 			</div>
 		</div>
 
+		<!--
 		<div class="col">
 			<div class="quote-item">
 				<select>
-					<?
+					< ?
 					$code = 'services';
 					$arFilter = Array('IBLOCK_CODE'=> $code, 'GLOBAL_ACTIVE'=>'Y');
 					$list = CIBlockSection::GetList(Array("SORT"=>"ASC"), $arFilter, true, false);
 
 					while($ar_result = $list->GetNext()) {?>
-						<option value="<?echo $ar_result['NAME']?>"><?echo $ar_result['NAME']?></option>
-					<?}?>
+						<option value="< ?echo $ar_result['NAME']? >">< ?echo $ar_result['NAME']? ></option>
+					< ?}? >
 				</select>
 			</div>
 		</div>
+		-->
 		
 		<div class="col-md-12">
 			<div class="quote-item">
 				<div class="quote-item">
-					<textarea name="MESSAGE" placeholder="<?echo GetMessage("YOUR_MESSAGE")?>"><?=$arResult["MESSAGE"]?></textarea>
+					<textarea name="MESSAGE" placeholder="<?echo GetMessage("YOUR_MESSAGE")?>" required><?=$arResult["MESSAGE"]?></textarea>
 				</div>
 			</div>
 		</div>

@@ -57,7 +57,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                                         ),
                                         "FILTER_NAME" => "",
                                         "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-                                        "IBLOCK_ID" => $GLOBALS["codingart_block_id"]["content_social_id"],
+                                        "IBLOCK_ID" => $GLOBALS["codingart_block_id"]["settings_main_id"],
                                         "IBLOCK_TYPE" => "content",
                                         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
                                         "INCLUDE_SUBSECTIONS" => "N",
@@ -179,18 +179,26 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                             <?if($GLOBALS['global_info']['contacts_phone_show']):?>
                                 <h4><?=$GLOBALS['global_info']['footer_title_phone']?></h4>
                                 <p>
-                                    <?=$GLOBALS['global_info']['contacts_phone1']?>
+                                    <a href="tel:<?=$GLOBALS['global_info']['contacts_phone1']?>">
+                                        <?=$GLOBALS['global_info']['contacts_phone1']?>
+                                    </a>
                                     <br>
-                                    <?=$GLOBALS['global_info']['contacts_phone2']?>
+                                    <a href="tel:<?=$GLOBALS['global_info']['contacts_phone2']?>">
+                                        <?=$GLOBALS['global_info']['contacts_phone2']?>
+                                    </a>
                                 </p>
                             <?endif;?>
 
                             <?if($GLOBALS['global_info']['contacts_email_show']):?>
                                 <h4><?=$GLOBALS['global_info']['footer_title_email']?></h4>
                                 <p>
-                                    <?=$GLOBALS['global_info']['contacts_email1']?>
+                                    <a href="mailto:<?=$GLOBALS['global_info']['contacts_email1']?>">
+                                        <?=$GLOBALS['global_info']['contacts_email1']?>
+                                    </a>
                                     <br>
-                                    <?=$GLOBALS['global_info']['contacts_email2']?>
+                                    <a href="mailto:<?=$GLOBALS['global_info']['contacts_email2']?>">
+                                        <?=$GLOBALS['global_info']['contacts_email2']?>
+                                    </a>
                                 </p>
                             <?endif;?>
                         </div>

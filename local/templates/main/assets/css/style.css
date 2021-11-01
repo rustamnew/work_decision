@@ -4160,6 +4160,12 @@ section.provide .img-box .statistic-item-icon img{
 .footer h4 {
     color: #F4F4F4;
 }
+.footer a {
+    color: #F4F4F4;
+}
+.footer a:hover {
+    color: #F4F4F4;
+}
 
 /*custom contacts*/
 

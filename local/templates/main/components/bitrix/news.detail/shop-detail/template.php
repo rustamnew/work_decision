@@ -29,7 +29,7 @@ $this->setFrameMode(true);
 						<?=$arResult["PROPERTIES"]["price"]["VALUE"];?>
 					</div>
 					<p><?=$arResult["PREVIEW_TEXT"]?></p>
-					<a href="#" class="btn-1">Добавить в корзину</a>
+					<a href="#" class="summonFormButton btn-1">Добавить в корзину</a>
 					<ul class="list-details">
 						<li><span>Артикул:</span> <?=$arResult["PROPERTIES"]["code"]["VALUE"];?></li>
 						<li><span>Категория:</span> 

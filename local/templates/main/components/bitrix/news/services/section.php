@@ -18,9 +18,7 @@ $this->setFrameMode(true);
 			<div class="col-lg-4">
 				<div class="single-practice-areas-head">
 					<h4>
-						<?$APPLICATION->IncludeFile(SITE_DIR."include/services_detail_sidebar_title.php", 
-						array(), 
-						array("MODE" => "text"));?>
+						<?=$GLOBALS["global_info"]["services_sidebar_title"];?>
 					</h4>
 				</div>
 				<?$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "sidebar-section-list", Array(

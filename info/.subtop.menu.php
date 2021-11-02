@@ -2,63 +2,63 @@
 $aMenuLinks = Array(
 	Array(
 		"Лицензия и сертификаты", 
-		"/license/", 
+		SITE_DIR."/license/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Вопросы и ответы", 
-		"/faq/", 
+		SITE_DIR."/faq/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Карьера", 
-		"/career/", 
+		SITE_DIR."/career/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Акции", 
-		"/promo/", 
+		SITE_DIR."/promo/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Отзывы", 
-		"/reviews/", 
+		SITE_DIR."/reviews/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Юристы", 
-		"/team/", 
+		SITE_DIR."/team/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Блог", 
-		"/blog/", 
+		SITE_DIR."/blog/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Магазин", 
-		"/shop/", 
+		SITE_DIR."/shop/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Контакты", 
-		"/contacts/", 
+		SITE_DIR."/contacts/", 
 		Array(), 
 		Array(), 
 		"" 

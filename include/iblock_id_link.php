@@ -4,7 +4,7 @@ $GLOBALS["codingart_block_id"] = array(
 
     'catalog_goods_id' => '25',
 
-    'content_social_id' => '1',
+    
     'content_features_under_id' => '3',
     'content_services_id' => '4',
     'content_team_id' => '5',
